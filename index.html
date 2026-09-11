@@ -1,16 +1,501 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier Stof & Stoel — Meubelstoffeerderij</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --linen: #e9e1c9;
+    --linen-soft: #f4efe0;
+    --ink: #2c221a;
+    --ink-soft: #5b4d3e;
+    --burgundy: #6e2a3a;
+    --burgundy-deep: #521f2c;
+    --forest: #43563f;
+    --brass: #a9824c;
+    --line: rgba(44, 34, 26, 0.18);
+    --max: 1080px;
+  }
 
-<!DOCTYPE html> <!--dit is de homepage van mijn site-->
-<html> <!--dit is het html-element-->
-    <head>
-        <title>Het eerste begin</title>
-        <meta charset-"utf-8">
-    </head>
-    <body>
-        Hier komt mijn tekst
-        <a href="binairstelsel.html">hoe je erachter komt</a>
-        <img src="https://www.google.com/imgres?q=apen&imgurl=https%3A%2F%2Fwww.apenheul.nl%2Fmedia%2Fd4xjgspw%2F600x400_banjoko_2024_3.jpg%3Fwidth%3D630%26height%3D424%26v%3D1dbc0bbde2c63b0&imgrefurl=https%3A%2F%2Fwww.apenheul.nl%2Fapen-abc&docid=erf_SX0amQVg4M&tbnid=VfH2a0Y16OAMTM&vet=12ahUKEwjsh_6lo-aWAxVHhf0HHWvIKuAQnPAOegQIPBAA..i&w=630&h=424&hcb=2&ved=2ahUKEwjsh_6lo-aWAxVHhf0HHWvIKuAQnPAOegQIPBAA" alt="Girl in a jacket">
+  * { box-sizing: border-box; }
 
-    </body>
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--linen);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  p { margin: 0; color: var(--ink-soft); }
+
+  a { color: inherit; }
+
+  img, svg { display: block; max-width: 100%; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .seam {
+    border: none;
+    border-top: 2px dashed var(--brass);
+    opacity: 0.55;
+    margin: 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--linen);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  .logo span { color: var(--burgundy); font-style: italic; }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 0.95rem;
+  }
+
+  .nav-links a { text-decoration: none; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--burgundy); }
+
+  .nav-phone {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    padding: 8px 18px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .nav-phone:hover { background: var(--ink); color: var(--linen); }
+
+  .nav-toggle { display: none; }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+    padding: 72px 32px 88px;
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    max-width: 12ch;
+  }
+
+  .hero-sub {
+    margin-top: 22px;
+    max-width: 42ch;
+    font-size: 1.08rem;
+  }
+
+  .cta {
+    display: inline-block;
+    margin-top: 34px;
+    background: var(--burgundy);
+    color: var(--linen-soft);
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 2px;
+    font-size: 0.98rem;
+    font-weight: 500;
+    transition: background 0.15s ease;
+  }
+  .cta:hover { background: var(--burgundy-deep); }
+
+  .hero-art {
+    width: 100%;
+    height: auto;
+  }
+
+  .section { padding: 76px 0; }
+
+  .section-head { max-width: 46ch; margin-bottom: 44px; }
+  .section-head h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); }
+  .section-head p { margin-top: 12px; }
+
+  .diensten-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .dienst {
+    background: var(--linen-soft);
+    padding: 36px 30px;
+  }
+
+  .dienst .tack {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--brass);
+    margin-bottom: 18px;
+  }
+
+  .dienst h3 { font-size: 1.2rem; margin-bottom: 10px; }
+  .dienst p { font-size: 0.97rem; }
+
+  .werkwijze-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    counter-reset: stap;
+  }
+
+  .stap {
+    position: relative;
+    padding-top: 18px;
+    border-top: 2px solid var(--ink);
+  }
+
+  .stap::before {
+    counter-increment: stap;
+    content: counter(stap);
+    position: absolute;
+    top: -14px;
+    left: 0;
+    background: var(--linen);
+    padding-right: 12px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--burgundy);
+  }
+
+  .stap h3 { font-size: 1.05rem; margin-bottom: 8px; }
+  .stap p { font-size: 0.94rem; }
+
+  .over {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .over-portret {
+    background: var(--forest);
+    aspect-ratio: 4 / 5;
+    border-radius: 2px;
+    display: flex;
+    align-items: flex-end;
+    padding: 22px;
+  }
+  .over-portret span {
+    color: var(--linen-soft);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
+  .over-tekst h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); margin-bottom: 18px; }
+  .over-tekst p + p { margin-top: 14px; }
+
+  .swatches {
+    display: flex;
+    gap: 10px;
+    margin-top: 26px;
+  }
+  .swatch {
+    width: 34px; height: 34px;
+    border-radius: 2px;
+    border: 1px solid var(--line);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .contact-info h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); margin-bottom: 16px; }
+  .contact-info p { margin-bottom: 22px; }
+
+  .contact-detail {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    font-size: 0.96rem;
+  }
+  .contact-detail:last-child { border-bottom: 1px solid var(--line); }
+  .contact-detail .label { color: var(--ink-soft); min-width: 110px; }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  label {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  input, textarea {
+    width: 100%;
+    background: var(--linen-soft);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 12px 14px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.97rem;
+    color: var(--ink);
+  }
+
+  input:focus, textarea:focus {
+    outline: 2px solid var(--burgundy);
+    outline-offset: 1px;
+  }
+
+  textarea { resize: vertical; min-height: 110px; }
+
+  .submit {
+    align-self: flex-start;
+    background: var(--ink);
+    color: var(--linen-soft);
+    border: none;
+    padding: 13px 28px;
+    border-radius: 2px;
+    font-size: 0.97rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .submit:hover { background: var(--burgundy); }
+
+  footer {
+    padding: 34px 0 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 860px) {
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding-top: 48px; }
+    .hero-art { order: -1; max-width: 320px; margin: 0 auto; }
+    .diensten-grid { grid-template-columns: 1fr; }
+    .werkwijze-list { grid-template-columns: 1fr 1fr; }
+    .over { grid-template-columns: 1fr; }
+    .over-portret { max-width: 280px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    footer { flex-direction: column; gap: 8px; align-items: flex-start; }
+  }
+
+  @media (max-width: 520px) {
+    .werkwijze-list { grid-template-columns: 1fr; }
+    .wrap { padding: 0 20px; }
+    .nav { padding: 18px 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">Atelier <span>Stof</span> & Stoel</div>
+    <div class="nav-links">
+      <a href="#diensten">Diensten</a>
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="#over">Over ons</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-phone" href="tel:+31612345678">06 12 34 56 78</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div>
+      <h1>Uw stoel of bank verdient een tweede leven</h1>
+      <p class="hero-sub">Al meer dan 20 jaar herstoffeer ik stoelen, fauteuils en banken met vakmanschap en oog voor detail — van familiestuk tot vintage vondst.</p>
+      <a class="cta" href="#contact">Vraag een offerte aan</a>
+    </div>
+    <svg class="hero-art" viewBox="0 0 320 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lijntekening van een stoel met stiksel">
+      <rect x="0" y="0" width="320" height="340" fill="none"/>
+      <path d="M95 130 Q95 60 160 60 Q225 60 225 130 L225 210 L95 210 Z" fill="var(--linen-soft)" stroke="var(--ink)" stroke-width="2.5"/>
+      <path d="M85 210 L235 210 L225 320 L95 320 Z" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+      <line x1="95" y1="320" x2="95" y2="300" stroke="var(--ink)" stroke-width="2.5"/>
+      <line x1="225" y1="320" x2="225" y2="300" stroke="var(--ink)" stroke-width="2.5"/>
+      <path d="M115 90 Q160 78 205 90" fill="none" stroke="var(--burgundy)" stroke-width="2" stroke-dasharray="4 5"/>
+      <path d="M110 130 Q160 118 210 130" fill="none" stroke="var(--burgundy)" stroke-width="2" stroke-dasharray="4 5"/>
+      <path d="M100 175 L220 175" fill="none" stroke="var(--brass)" stroke-width="2" stroke-dasharray="4 5"/>
+      <rect x="240" y="240" width="46" height="46" rx="2" fill="var(--forest)" stroke="var(--ink)" stroke-width="1.5" transform="rotate(8 263 263)"/>
+      <rect x="252" y="200" width="40" height="40" rx="2" fill="var(--burgundy)" stroke="var(--ink)" stroke-width="1.5" transform="rotate(-6 272 220)"/>
+    </svg>
+  </section>
+
+  <hr class="seam">
+
+  <section class="section" id="diensten">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Wat ik voor u kan doen</h2>
+        <p>Elk stuk meubilair krijgt persoonlijke aandacht, van eerste inspectie tot de laatste steek.</p>
+      </div>
+      <div class="diensten-grid">
+        <div class="dienst">
+          <div class="tack"></div>
+          <h3>Stoelen herstofferen</h3>
+          <p>Eetkamerstoelen, fauteuils en antieke stoelen krijgen nieuwe stof, vulling en waar nodig een opgeknapt frame.</p>
+        </div>
+        <div class="dienst">
+          <div class="tack"></div>
+          <h3>Banken & fauteuils</h3>
+          <p>Van twee- en driezitsbanken tot chesterfields: strak vakwerk, ook bij ronde vormen en gestikte details.</p>
+        </div>
+        <div class="dienst">
+          <div class="tack"></div>
+          <h3>Advies & materiaalkeuze</h3>
+          <p>Hulp bij het kiezen van stof, leer en kleur — passend bij uw interieur en bij dagelijks gebruik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="seam">
+
+  <section class="section" id="werkwijze">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Werkwijze</h2>
+        <p>Vier stappen, van eerste contact tot uw vernieuwde meubelstuk thuis.</p>
+      </div>
+      <div class="werkwijze-list">
+        <div class="stap">
+          <h3>Afspraak & advies</h3>
+          <p>U neemt contact op, ik bekijk het meubelstuk en denk mee over stof en uitvoering.</p>
+        </div>
+        <div class="stap">
+          <h3>Stof kiezen</h3>
+          <p>Samen kiezen we de stof, kleur en afwerking die bij u passen.</p>
+        </div>
+        <div class="stap">
+          <h3>Vakwerk in het atelier</h3>
+          <p>Het meubel wordt gestript, waar nodig hersteld en met de hand opnieuw gestoffeerd.</p>
+        </div>
+        <div class="stap">
+          <h3>Ophalen of bezorgen</h3>
+          <p>Uw meubelstuk gaat mee naar huis, klaar voor jarenlang gebruik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="seam">
+
+  <section class="section" id="over">
+    <div class="wrap over">
+      <div class="over-portret">
+        <span>Aan het werk in het atelier</span>
+      </div>
+      <div class="over-tekst">
+        <h2>Vakmanschap met een persoonlijke touch</h2>
+        <p>Ik stoffeer al meer dan twintig jaar stoelen en banken, en leerde het vak van de grond af aan. Elk meubelstuk vertelt een verhaal — of het nu een erfstuk is of een tweedehands vondst — en dat verhaal krijgt bij mij een vervolg.</p>
+        <p>Ik werk het liefst met natuurlijke stoffen en oog voor de details die een stuk echt bijzonder maken: het stiksel, de knopen, de pasvorm.</p>
+        <div class="swatches">
+          <div class="swatch" style="background:var(--burgundy)"></div>
+          <div class="swatch" style="background:var(--forest)"></div>
+          <div class="swatch" style="background:var(--brass)"></div>
+          <div class="swatch" style="background:var(--ink-soft)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="seam">
+
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <h2>Neem contact op</h2>
+        <p>Stuur een bericht of bel gerust voor een vrijblijvend advies.</p>
+        <div class="contact-detail"><span class="label">Telefoon</span><span>06 12 34 56 78</span></div>
+        <div class="contact-detail"><span class="label">E-mail</span><span>info@atelierstofenstoel.nl</span></div>
+        <div class="contact-detail"><span class="label">Atelier</span><span>Werkplaatsstraat 12, Amsterdam</span></div>
+        <div class="contact-detail"><span class="label">Openingstijden</span><span>Di–Vr 9:00–17:00, Za op afspraak</span></div>
+      </div>
+      <form>
+        <div>
+          <label for="naam">Naam</label>
+          <input id="naam" name="naam" type="text" placeholder="Uw naam">
+        </div>
+        <div>
+          <label for="email">E-mailadres</label>
+          <input id="email" name="email" type="email" placeholder="naam@voorbeeld.nl">
+        </div>
+        <div>
+          <label for="bericht">Bericht</label>
+          <textarea id="bericht" name="bericht" placeholder="Vertel iets over uw meubelstuk..."></textarea>
+        </div>
+        <button class="submit" type="submit">Verstuur bericht</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>&copy; 2026 Atelier Stof & Stoel</span>
+    <span>Meubelstoffeerderij in Amsterdam</span>
+  </div>
+</footer>
+
+</body>
 </html>
 
 
