@@ -22,3 +22,33 @@ li a {
 li a:hover {
   background-color: #c2b1b1;
 }
+
+
+
+.dropdown {
+  position: relative;
+  padding-bottom: 20px;
+  min-width: 130px;
+}
+
+.dropdown-inhoud {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #252540;
+  border-radius: 8px;
+  padding: 6px 0;
+  min-width: 130px;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-inhoud {
+  display: flex;
+}
+
+.dropdown-inhoud li a {
+  display: block;
+  padding: 8px 16px;
+  color: #DADAE8;
+}
