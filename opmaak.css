@@ -89,3 +89,27 @@ li a:hover {
  background-color: #c2b1b1;
 }
 
+.dropdown-content {
+  display: none;
+}
+/* Dropdown standaard verborgen */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 150px;
+  z-index: 1;
+}
+
+/* Dropdown verschijnt bij hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown-items onder elkaar */
+.dropdown-content li {
+  float: none;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
