@@ -1,29 +1,58 @@
-ul {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #12121F;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.storm {
+  position: absolute;
+  top: -60px;
+  right: -80px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+nav {
+  position: relative;
+  z-index: 5;
+  background-color: #1B1B2E;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+}
+
+.logo {
+  color: #F2C744;
+  font-size: 22px;
+}
+
+nav ul {
   list-style-type: none;
+  display: flex;
+  gap: 24px;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #4d4e4e;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+nav a {
+  color: #B8B8C8;
   text-decoration: none;
+  font-size: 14px;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #c2b1b1;
+nav a.actief {
+  color: #ffffff;
+  border-bottom: 2px solid #F2C744;
+  padding-bottom: 4px;
 }
 
-
+nav a:hover {
+  color: #F2C744;
+}
 
 .dropdown {
   position: relative;
@@ -51,4 +80,52 @@ li a:hover {
   display: block;
   padding: 8px 16px;
   color: #DADAE8;
+}
+
+.intro {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 40px 28px 0;
+}
+
+.foto {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background-color: #2E2E4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F2C744;
+  font-size: 13px;
+  border: 2px solid #F2C744;
+  flex-shrink: 0;
+}
+
+.uitgelicht {
+  position: relative;
+  z-index: 1;
+  margin: 28px 28px 0;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #252540;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F2C744;
+  font-size: 13px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  background-color: #1B1B2E;
+  padding: 14px 28px;
+  text-align: center;
+  color: #7A7A8C;
+  font-size: 12px;
 }
