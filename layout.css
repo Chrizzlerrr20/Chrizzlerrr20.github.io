@@ -78,46 +78,53 @@
 .top-level-menu a:hover { color: #000000; }
 
 
-/* ===== INFO-KAART: de hele container met afbeelding + tekst ===== */
-.info-card {
-  display: flex;               /* zet afbeelding en tekst naast elkaar */
-  align-items: flex-start;     /* lijnt ze uit vanaf de bovenkant */
-  gap: 24px;                   /* ruimte tussen afbeelding en tekst */
-  background-color: #ffffff;   /* witte achtergrond voor het "kaart"-effect */
-  border-radius: 12px;         /* ronde hoeken */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* zachte schaduw rondom */
-  padding: 24px;                /* ruimte binnenin de kaart */
-  margin: 20px auto;            /* ruimte erboven/eronder + kaart centreren */
-  max-width: 800px;             /* kaart wordt niet te breed op grote schermen */
+/* ===== MENU: zorgt dat dropdown ALTIJD bovenop andere content ligt ===== */
+.top-level-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;   /* nodig zodat z-index werkt */
+    z-index: 100;          /* menu ligt bovenop alle andere content */
 }
 
-/* ===== AFBEELDING binnen de info-kaart ===== */
-.info-afbeelding {
-  width: 180px;                 /* vaste breedte van de afbeelding */
-  height: 180px;                /* vaste hoogte van de afbeelding */
-  object-fit: cover;            /* afbeelding vult het vak netjes, zonder vervorming */
-  border-radius: 10px;          /* ronde hoeken op de afbeelding zelf */
-  flex-shrink: 0;                /* voorkomt dat afbeelding kleiner wordt geknepen */
+.second-level-menu,
+.third-level-menu {
+    z-index: 100;           /* zekerheid dat de submenu's ook bovenop liggen */
 }
 
-/* ===== TEKSTBLOK: titel + paragrafen naast de afbeelding ===== */
-.info-tekst h2 {
-  margin-top: 0;                /* geen extra ruimte boven de titel */
-  color: rgb(60, 82, 163);      /* kleur van de titel */
-  font-family: Arial, sans-serif; /* lettertype van de titel */
+/* ===== PAGINA-ACHTERGROND: mooie kleur voor de hele pagina ===== */
+body {
+    background-color: rgb(113, 121, 180); /* mooie blauwe achtergrondkleur */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.info-tekst p {
-  color: #333;                  /* donkergrijze tekstkleur (leesbaarder dan zwart) */
-  line-height: 1.6;             /* meer regelafstand, prettiger leesbaar */
-  font-family: Arial, sans-serif; /* lettertype van de tekst */
+/* ===== INFO-KAART & AI-VRAAG-KAARTEN: witte achtergrond waar geschreven wordt ===== */
+.info-card,
+.ai-vraag {
+    position: relative;
+    z-index: 1;                          /* ligt ONDER het menu */
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    background-color: #ffffff;           /* wit, waar de tekst staat */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-/* ===== RESPONSIVE: aanpassing voor smalle schermen (bv. telefoon) ===== */
-@media (max-width: 600px) {
-  .info-card {
-    flex-direction: column;     /* afbeelding komt boven de tekst i.p.v. ernaast */
-    align-items: center;        /* alles wordt gecentreerd */
-    text-align: center;         /* tekst wordt gecentreerd */
-  }
+.ai-vraag {
+    flex-direction: column;   /* kopje boven tekst, geen afbeelding ernaast */
+}
+
+.ai-vraag h2 {
+    margin-top: 0;
+    color: rgb(60, 82, 163);
+}
+
+.ai-vraag p {
+    color: #333;
+    line-height: 1.6;
 }
