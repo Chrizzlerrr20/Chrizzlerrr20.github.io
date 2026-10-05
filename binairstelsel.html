@@ -1,95 +1,259 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
 
-<!DOCTYPE html> <!--dit is het binair stelsel-->
-<html> <!--dit is het html-element-->
-    <head>
-        <title>De aap</title>
-        <meta charset-"utf-8">
-        <link rel="stylesheet" type="text/css" href="layout.css">
+    <!-- Titel van de website -->
+    <title>Mijn ICT-website</title>
 
-    </head>
+    <!-- Koppeling met het CSS-bestand -->
+    <link rel="stylesheet" href="layout.css">
+</head>
 
-<style>
-body {
-  background-color: rgb(113, 121, 180);
-}
+<body>
 
-h1 {
-  color: white;
-  text-align: center;
-}
+    <!-- =========================
+         NAVIGATIE
+         ========================= -->
 
-p {
-  
- 
-}
-</style>
+    <nav class="navbar">
 
-    <body>
-   
-        <h1>De gorilla</h1>
-    <p></p>
+        <!-- Naam/logo van de website -->
+        <div class="logo">
+            ICT-WERELD
+        </div>
 
-       <ul class="top-level-menu">
+        <!-- Hoofdmenu -->
+        <ul class="menu">
 
-    <li>
-        <a href="index.html">Home</a>
-    </li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-    <li>
-        <a href="binairstelsel.html">Gorilla</a>
-        <ul class="second-level-menu">
-            <li><a href="#">Geschiedenis</a></li>
-            <li><a href="#">Voeding</a></li>
-            <li><a href="#">Leefgebied</a></li>
-            
+            <!-- Dropdownmenu -->
+            <li class="dropdown">
+                <a href="#">Onderwerpen ▾</a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="invoer-uitvoer.html">Invoer & uitvoer</a>
+                    </li>
+
+                    <li>
+                        <a href="binairstelsel.html">Binair stelsel</a>
+                    </li>
+
+                    <li>
+                        <a href="kleurmodellen.html">Kleurmodellen</a>
+                    </li>
+
+                    <li>
+                        <a href="compressie.html">Compressie</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="ai.html">AI</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
-    </li>
+    </nav>
 
-    <li>
-        <a href="kleurmodellen.html">Flamingo</a>
-        <ul class="second-level-menu">
-            <li><a href="#">Geschiedenis</a></li>
-            <li><a href="kleumodellen2.html">Voeding</a></li>
-            <li><a href="#">Leefgebied</a></li>
 
-        </ul>
-    </li>
+    <!-- =========================
+         WELKOMSTGEDEELTE
+         ========================= -->
 
-    <li>
-        <a href="">saaie formatica</a>
-        <ul class="second-level-menu">
-            <li><a href="index.html">indexhtml</a></li>
-            <li><a href="binairstelsel.html">binairstelsel</a></li>
-            <li><a href="kleurmodellen.html">kleurmodellen</a></li>
-            <li><a href="ai.html">ai</a></li>
-        </ul>
-    </li>
+    <header class="hero">
 
-</ul>
-<!-- Deze container zet alles netjes naast elkaar -->
-<div style="display: flex; align-items: flex-start; gap: 20px; border: 2px solid rgb(60, 82, 163); padding: 20px; width: 100%; box-sizing: border-box;">
+        <div class="hero-content">
 
-  <!-- Het plaatje staat LINKS en is kleiner gemaakt -->
-  <img src="istockphoto-2219198285-612x612.jpg" style="width: 150px; height: auto; display: block;">
+            <p class="kleine-titel">MIJN ICT-WEBSITE</p>
 
-  <!-- De tekst komt RECHTS naast het plaatje -->
-  <div style="flex: 1;">
-    <h2 style="margin-top: 0;">Jouw Titel Hier</h2>
-    <p>Hier kun je nu alle tekst toevoegen die je wilt. Deze tekst staat nu netjes aan de rechterkant van de afbeelding.</p>
-    <p>Je kunt hier zoveel regels typen als je zelf nodig hebt!</p>
-  </div>
+            <h1>Welkom in de wereld van ICT</h1>
 
-</div>
-    <!-- ^ sluit de container hierboven correct af -->
+            <p>
+                Op deze website vertel ik over verschillende onderwerpen
+                uit de informatica en wat ik hierover heb geleerd.
+            </p>
 
-    <!-- ===== BINARY BONANZA LINK: als afbeelding, onderaan de pagina ===== -->
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="https://games.penjee.com/binary-bonanza/">
-            <iframe src="https://games.penjee.com/binary-bonanza/game.php" width="700" height="500" frameborder="no" scrolling="no" ></iframe>
-        </a>
-    </div>
+            <a class="knop" href="#onderwerpen">
+                Bekijk de onderwerpen
+            </a>
 
- 
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         OVER MIJ
+         ========================= -->
+
+    <main>
+
+        <section class="intro">
+
+            <!-- Afbeelding -->
+            <div class="foto">
+
+                <!-- Vervang deze afbeelding door je eigen afbeelding -->
+                <img src="afbeeldingen/computer.jpg"
+                     alt="Een computer">
+
+            </div>
+
+
+            <!-- Informatietekst -->
+            <div class="tekst">
+
+                <p class="kleine-titel">OVER MIJ</p>
+
+                <h2>Wie ben ik?</h2>
+
+                <p>
+                    Mijn naam is <strong>[jouw naam]</strong>.
+                    Op deze website laat ik zien wat ik heb geleerd
+                    over ICT en informatica.
+                </p>
+
+                <p>
+                    Ik behandel verschillende onderwerpen zoals het
+                    binaire stelsel, invoer en uitvoer, kleurmodellen,
+                    compressie en kunstmatige intelligentie.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ONDERWERPEN
+             ========================= -->
+
+        <section id="onderwerpen" class="onderwerpen">
+
+            <p class="kleine-titel">MIJN ONDERWERPEN</p>
+
+            <h2>Wat kun je hier vinden?</h2>
+
+            <div class="kaarten">
+
+                <div class="kaart">
+                    <span>01</span>
+                    <h3>Invoer & uitvoer</h3>
+                    <p>
+                        Hoe een computer informatie ontvangt,
+                        verwerkt en weer uitvoert.
+                    </p>
+                </div>
+
+                <div class="kaart">
+                    <span>02</span>
+                    <h3>Binair stelsel</h3>
+                    <p>
+                        Hoe computers informatie opslaan met
+                        nullen en enen.
+                    </p>
+                </div>
+
+                <div class="kaart">
+                    <span>03</span>
+                    <h3>Kleurmodellen</h3>
+                    <p>
+                        Hoe digitale apparaten kleuren
+                        weergeven en combineren.
+                    </p>
+                </div>
+
+                <div class="kaart">
+                    <span>04</span>
+                    <h3>Compressie</h3>
+                    <p>
+                        Hoe bestanden kleiner kunnen worden
+                        gemaakt.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VIDEO
+             ========================= -->
+
+        <section class="video">
+
+            <p class="kleine-titel">VIDEO</p>
+
+            <h2>Een video over ICT</h2>
+
+            <p>
+                Hieronder komt een korte video die bij het onderwerp
+                past. Ik heb deze video gekozen omdat hij het onderwerp
+                op een duidelijke en begrijpelijke manier uitlegt.
+            </p>
+
+            <!--
+                Vervang de link hieronder door de embed-link
+                van jouw YouTube-video.
+            -->
+
+            <div class="video-box">
+
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO-ID"
+                    title="YouTube video"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         CONTACT
+         ========================= -->
+
+    <footer id="contact">
+
+        <div class="contact">
+
+            <p class="kleine-titel">CONTACT</p>
+
+            <h2>Vragen of opmerkingen?</h2>
+
+            <p>
+                Bedankt voor het bekijken van mijn website!
+                Hier kun je eventueel je contactgegevens of
+                een link plaatsen.
+            </p>
+
+            <p>
+                📧 E-mail: jouwmail@example.com
+            </p>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Mijn ICT-website
+        </div>
+
+    </footer>
 
 </body>
 </html>
+```
+

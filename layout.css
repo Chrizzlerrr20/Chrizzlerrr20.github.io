@@ -1,126 +1,557 @@
-.third-level-menu
-{
-    position: absolute;
-    top: 0;
-    right: -150px;
-    width: 150px;
+/* ==================================================
+   ALGEMENE PAGINA
+   ================================================== */
+
+/* Zorgt ervoor dat padding en borders goed worden meegerekend */
+* {
+    box-sizing: border-box;
+}
+
+/* Achtergrond en standaardlettertype van de hele website */
+body {
+    background-color: #eef4f2;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26352f;
+}
+
+
+/* ==================================================
+   HOOFDMENU
+   ================================================== */
+
+/* De groene balk bovenaan de website */
+.top-level-menu {
+    width: 100%;
+    min-height: 65px;
+
     list-style: none;
+
     padding: 0;
     margin: 0;
-    display: none;
-    z-index: 100;
-}
 
-.third-level-menu > li
-{
-    height: 30px;
-    width: 80px;
-    background: #999999;
-}
-.third-level-menu > li:hover { background: #CCCCCC; }
+    background-color: #173f35;
 
-.second-level-menu
-{
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 150px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    z-index: 100;
-}
-
-.second-level-menu > li
-{
     position: relative;
-    height: 30px;
-    background: #999999;
-}
-.second-level-menu > li:hover { background: #CCCCCC; }
-
-/* ===== TOP-LEVEL MENU: alle regels samengevoegd ===== */
-.top-level-menu
-{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;   /* nodig zodat z-index werkt */
-    z-index: 100;          /* menu ligt bovenop andere content */
+    z-index: 100;
 }
 
-/* ===== CLEARFIX: zorgt dat het menu zijn ruimte behoudt ===== */
+/* Zorgt ervoor dat het menu zijn hoogte behoudt */
 .top-level-menu::after {
     content: "";
     display: table;
     clear: both;
 }
 
-.top-level-menu > li
-{
+
+/* De knoppen van het hoofdmenu */
+.top-level-menu > li {
     position: relative;
+
     float: left;
-    height: 30px;
-    width: 150px;
-    background: #999999;
-}
-.top-level-menu > li:hover { background: #CCCCCC; }
 
-.top-level-menu li:hover > ul
-{
-    /* On hover, display the next level's menu */
-    display: inline;
+    height: 65px;
+
+    width: 170px;
+
+    background-color: #173f35;
 }
 
 
-/* Menu Link Styles */
+/* Kleur wanneer je met je muis over een knop gaat */
+.top-level-menu > li:hover {
+    background-color: #2d765c;
+}
 
-.top-level-menu a /* Apply to all links inside de multi-level menu */
-{
-    font: bold 14px Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
+
+/* Tekst en links in het menu */
+.top-level-menu a {
+    font: bold 15px Arial, Helvetica, sans-serif;
+
+    color: white;
+
     text-decoration: none;
-    padding: 0 0 0 10px;
+
+    padding: 0 20px;
+
     display: block;
-    line-height: 30px;
+
+    line-height: 65px;
+
+    text-align: center;
 }
-.top-level-menu a:hover { color: #000000; }
 
 
-/* ===== PAGINA-ACHTERGROND: mooie kleur voor de hele pagina ===== */
-body {
-    background-color: rgb(113, 121, 180);
+/* Tekstkleur bij hover */
+.top-level-menu a:hover {
+    color: white;
+}
+
+
+/* ==================================================
+   DROPDOWNMENU
+   ================================================== */
+
+/* Het menu dat naar beneden uitklapt */
+.second-level-menu {
+    position: absolute;
+
+    top: 65px;
+    left: 0;
+
+    width: 220px;
+
+    list-style: none;
+
+    padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
+
+    display: none;
+
+    background-color: #173f35;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 200;
 }
 
-/* ===== INFO-KAART & AI-VRAAG-KAARTEN: witte achtergrond waar geschreven wordt ===== */
-.info-card,
-.ai-vraag {
+
+/* Onderdelen van het dropdownmenu */
+.second-level-menu > li {
     position: relative;
-    z-index: 1;
+
+    height: 50px;
+
+    background-color: #173f35;
+}
+
+
+/* Hover op een onderdeel van het dropdownmenu */
+.second-level-menu > li:hover {
+    background-color: #2d765c;
+}
+
+
+/* Links in het dropdownmenu */
+.second-level-menu a {
+    line-height: 50px;
+
+    text-align: left;
+
+    padding-left: 20px;
+}
+
+
+/* Laat het dropdownmenu zien wanneer je eroverheen gaat */
+.top-level-menu li:hover > ul {
+    display: block;
+}
+
+
+/* ==================================================
+   EVENTUEEL DERDE MENU
+   ================================================== */
+
+/* Voor een eventueel submenu binnen een submenu */
+.third-level-menu {
+    position: absolute;
+
+    top: 0;
+    right: -220px;
+
+    width: 220px;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: none;
+
+    background-color: #173f35;
+
+    z-index: 300;
+}
+
+
+/* Onderdelen van het derde menu */
+.third-level-menu > li {
+    position: relative;
+
+    height: 50px;
+
+    background-color: #173f35;
+}
+
+
+/* Hover op het derde menu */
+.third-level-menu > li:hover {
+    background-color: #2d765c;
+}
+
+
+/* ==================================================
+   WELKOMSTGEDEELTE / HERO
+   ================================================== */
+
+/* Grote bovenkant van de homepage */
+.hero {
+    min-height: 420px;
+
     display: flex;
-    align-items: flex-start;
-    gap: 24px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 24px;
-    margin: 20px auto;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #173f35,
+        #4b9b78
+    );
+
+    color: white;
+}
+
+
+/* Grote titel */
+.hero h1 {
+    font-size: 48px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Tekst onder de titel */
+.hero p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ==================================================
+   HOOFDGEDEELTE
+   ================================================== */
+
+/* Zorgt ervoor dat de inhoud niet helemaal tegen de zijkant staat */
+main {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 25px;
+}
+
+
+/* ==================================================
+   INFORMATIEKAART
+   ================================================== */
+
+/* Witte kaart met afbeelding en tekst */
+.info-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    padding: 35px;
+
+    margin: 30px auto;
+
+    max-width: 1000px;
+}
+
+
+/* Afbeelding in de informatiekaart */
+.info-card img {
+    width: 420px;
+
+    max-width: 100%;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+}
+
+
+/* Titel van de informatiekaart */
+.info-card h2 {
+    color: #173f35;
+
+    font-size: 30px;
+
+    margin-top: 0;
+}
+
+
+/* Tekst in de informatiekaart */
+.info-card p {
+    color: #333;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   AI-KAART
+   ================================================== */
+
+/* Witte kaart voor informatie over AI */
+.ai-vraag {
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    padding: 30px;
+
+    margin: 30px auto;
+
     max-width: 800px;
 }
 
-.ai-vraag {
-    flex-direction: column;
-}
 
+/* Titel van een AI-vraag */
 .ai-vraag h2 {
     margin-top: 0;
-    color: rgb(60, 82, 163);
+
+    color: #173f35;
 }
 
+
+/* Tekst bij een AI-vraag */
 .ai-vraag p {
     color: #333;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   VIDEO
+   ================================================== */
+
+/* Witte kaart rondom de YouTube-video */
+.video-section {
+    background-color: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    margin: 50px auto;
+
+    max-width: 900px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Titel van het videogedeelte */
+.video-section h2 {
+    color: #173f35;
+}
+
+
+/* Zorgt ervoor dat de video netjes wordt weergegeven */
+.video {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    margin-top: 25px;
+}
+
+
+/* De YouTube-video zelf */
+.video iframe {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+}
+
+
+/* ==================================================
+   AFBEELDINGEN
+   ================================================== */
+
+/* Algemene afbeeldingen in de hoofdinhoud */
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Afbeeldingen krijgen afgeronde hoeken */
+main img {
+    border-radius: 15px;
+}
+
+
+/* ==================================================
+   KOPPEN EN TEKST
+   ================================================== */
+
+/* Algemene tweede kop */
+h2 {
+    font-size: 30px;
+}
+
+
+/* Gewone paragrafen */
+p {
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   CONTACT / FOOTER
+   ================================================== */
+
+/* Onderkant van de website */
+footer {
+    background-color: #173f35;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    margin-top: 60px;
+}
+
+
+/* Titel in de footer */
+footer h2 {
+    color: white;
+}
+
+
+/* Tekst in de footer */
+footer p {
     line-height: 1.6;
+}
+
+
+/* Links in de footer */
+footer a {
+    color: white;
+
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   KNOPPEN
+   ================================================== */
+
+/* Algemene knop */
+.button {
+    display: inline-block;
+
+    background-color: #2d765c;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    margin-top: 10px;
+
+    font-weight: bold;
+}
+
+
+/* Kleur wanneer je over de knop gaat */
+.button:hover {
+    background-color: #173f35;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+   ================================================== */
+
+/* Aanpassingen voor telefoons en kleine schermen */
+@media (max-width: 800px) {
+
+    /* Menu-items komen onder elkaar */
+    .top-level-menu > li {
+        width: 100%;
+        float: none;
+    }
+
+
+    /* Dropdownmenu neemt volledige breedte */
+    .second-level-menu {
+        position: static;
+
+        width: 100%;
+    }
+
+
+    /* Afbeelding en tekst komen onder elkaar */
+    .info-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    /* Afbeelding wordt breder op kleine schermen */
+    .info-card img {
+        width: 100%;
+    }
+
+
+    /* Titel wordt iets kleiner */
+    .hero h1 {
+        font-size: 36px;
+    }
+
+
+    /* Hero wordt iets kleiner */
+    .hero {
+        min-height: 350px;
+    }
+
+
+    /* Hoofdinhoud krijgt minder ruimte */
+    main {
+        padding: 40px 15px;
+    }
 }
