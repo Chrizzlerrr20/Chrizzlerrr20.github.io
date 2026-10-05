@@ -1,349 +1,543 @@
 /* ==================================================
-   ALGEMENE PAGINA
+   BASIS
    ================================================== */
 
-/* Zorgt ervoor dat padding en borders goed worden meegerekend */
+/* Zorgt ervoor dat afmetingen netjes worden berekend */
 * {
     box-sizing: border-box;
 }
 
-/* Achtergrond en standaardlettertype van de hele website */
+
+/* Scrollen naar onderdelen gaat soepel */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Algemene stijl van de website */
 body {
-    background-color: #eef4f2;
     margin: 0;
+
     font-family: Arial, Helvetica, sans-serif;
-    color: #26352f;
+
+    background-color: #f5f1e8;
+
+    color: #24352d;
 }
 
 
 /* ==================================================
-   HOOFDMENU
+   NAVIGATIE
    ================================================== */
 
-/* De groene balk bovenaan de website */
-.top-level-menu {
+/* De volledige menubalk */
+.navbar {
     width: 100%;
-    min-height: 65px;
 
+    min-height: 78px;
+
+    background-color: #12372a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: relative;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Logo links */
+.logo {
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* Hoofdmenu */
+.menu {
     list-style: none;
 
-    padding: 0;
     margin: 0;
 
-    background-color: #173f35;
+    padding: 0;
 
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* Elk menu-item */
+.menu > li {
     position: relative;
-    z-index: 100;
-}
-
-/* Zorgt ervoor dat het menu zijn hoogte behoudt */
-.top-level-menu::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 
-/* De knoppen van het hoofdmenu */
-.top-level-menu > li {
-    position: relative;
+/* Links in het hoofdmenu */
+.menu > li > a {
+    display: block;
 
-    float: left;
-
-    height: 65px;
-
-    width: 170px;
-
-    background-color: #173f35;
-}
-
-
-/* Kleur wanneer je met je muis over een knop gaat */
-.top-level-menu > li:hover {
-    background-color: #2d765c;
-}
-
-
-/* Tekst en links in het menu */
-.top-level-menu a {
-    font: bold 15px Arial, Helvetica, sans-serif;
-
-    color: white;
+    color: #ffffff;
 
     text-decoration: none;
 
-    padding: 0 20px;
+    font-size: 15px;
 
-    display: block;
+    font-weight: bold;
 
-    line-height: 65px;
+    padding: 30px 18px;
 
-    text-align: center;
+    transition: 0.25s;
 }
 
 
-/* Tekstkleur bij hover */
-.top-level-menu a:hover {
-    color: white;
+/* Hover op een hoofdmenu-item */
+.menu > li > a:hover {
+    background-color: #2f765c;
+
+    color: #ffffff;
 }
 
 
 /* ==================================================
-   DROPDOWNMENU
+   DROPDOWN
    ================================================== */
 
-/* Het menu dat naar beneden uitklapt */
-.second-level-menu {
+/* Dropdown-menu */
+.dropdown-menu {
     position: absolute;
 
-    top: 65px;
+    top: 78px;
+
     left: 0;
 
-    width: 220px;
+    width: 230px;
+
+    padding: 8px 0;
+
+    margin: 0;
 
     list-style: none;
 
-    padding: 0;
-    margin: 0;
+    background-color: #ffffff;
+
+    border-radius: 0 0 12px 12px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 
     display: none;
-
-    background-color: #173f35;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-    z-index: 200;
 }
 
 
-/* Onderdelen van het dropdownmenu */
-.second-level-menu > li {
-    position: relative;
-
-    height: 50px;
-
-    background-color: #173f35;
+/* Onderdelen van dropdown */
+.dropdown-menu li {
+    width: 100%;
 }
 
 
-/* Hover op een onderdeel van het dropdownmenu */
-.second-level-menu > li:hover {
-    background-color: #2d765c;
+/* Links in dropdown */
+.dropdown-menu li a {
+    display: block;
+
+    padding: 14px 20px;
+
+    color: #24352d;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
 }
 
 
-/* Links in het dropdownmenu */
-.second-level-menu a {
-    line-height: 50px;
+/* Hover op dropdown */
+.dropdown-menu li a:hover {
+    background-color: #e1f0e8;
 
-    text-align: left;
+    color: #1c6047;
 
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 
-/* Laat het dropdownmenu zien wanneer je eroverheen gaat */
-.top-level-menu li:hover > ul {
+/* Dropdown openen */
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 
 
 /* ==================================================
-   EVENTUEEL DERDE MENU
-   ================================================== */
-
-/* Voor een eventueel submenu binnen een submenu */
-.third-level-menu {
-    position: absolute;
-
-    top: 0;
-    right: -220px;
-
-    width: 220px;
-
-    list-style: none;
-
-    padding: 0;
-    margin: 0;
-
-    display: none;
-
-    background-color: #173f35;
-
-    z-index: 300;
-}
-
-
-/* Onderdelen van het derde menu */
-.third-level-menu > li {
-    position: relative;
-
-    height: 50px;
-
-    background-color: #173f35;
-}
-
-
-/* Hover op het derde menu */
-.third-level-menu > li:hover {
-    background-color: #2d765c;
-}
-
-
-/* ==================================================
-   WELKOMSTGEDEELTE / HERO
+   HERO
    ================================================== */
 
 /* Grote bovenkant van de homepage */
 .hero {
-    min-height: 420px;
+    min-height: 570px;
 
     display: flex;
 
-    justify-content: center;
     align-items: center;
+
+    justify-content: center;
 
     text-align: center;
 
-    padding: 60px 20px;
-
-    background: linear-gradient(
-        135deg,
-        #173f35,
-        #4b9b78
-    );
+    padding: 80px 20px;
 
     color: white;
+
+    background:
+        linear-gradient(
+            rgba(18, 55, 42, 0.72),
+            rgba(18, 55, 42, 0.72)
+        ),
+        url("afbeeldingen/jungle.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* Tekst in hero */
+.hero-content {
+    max-width: 850px;
+}
+
+
+/* Kleine tekst boven de titel */
+.kleine-titel {
+    color: #f3b562;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
 }
 
 
 /* Grote titel */
 .hero h1 {
-    font-size: 48px;
+    font-size: 58px;
 
-    margin-bottom: 20px;
+    line-height: 1.1;
+
+    margin: 0 auto 25px auto;
+
+    max-width: 850px;
 }
 
 
 /* Tekst onder de titel */
-.hero p {
+.hero-tekst {
     font-size: 19px;
 
-    line-height: 1.7;
+    line-height: 1.8;
 
     max-width: 700px;
 
-    margin: auto;
+    margin: 0 auto 35px auto;
+
+    color: #f5f5f5;
+}
+
+
+/* Oranje knop */
+.hero-button {
+    display: inline-block;
+
+    background-color: #e99b45;
+
+    color: #17372b;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    transition: 0.25s;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Hover op knop */
+.hero-button:hover {
+    background-color: #f3b562;
+
+    transform: translateY(-3px);
 }
 
 
 /* ==================================================
-   HOOFDGEDEELTE
+   HOOFDINHOUD
    ================================================== */
 
-/* Zorgt ervoor dat de inhoud niet helemaal tegen de zijkant staat */
 main {
-    max-width: 1100px;
+    max-width: 1200px;
 
     margin: auto;
 
-    padding: 60px 25px;
+    padding: 80px 30px;
 }
 
 
 /* ==================================================
-   INFORMATIEKAART
+   INTRODUCTIE
    ================================================== */
 
-/* Witte kaart met afbeelding en tekst */
-.info-card {
-    display: flex;
+.intro {
+    max-width: 750px;
+
+    margin: 0 auto 60px auto;
+
+    text-align: center;
+}
+
+
+/* Kleine groene titel */
+.section-label {
+    color: #2f765c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Koppen */
+.intro h2,
+.info-section h2,
+.video-section h2 {
+    color: #17372b;
+
+    font-size: 40px;
+
+    margin: 10px 0 20px 0;
+}
+
+
+/* Introductietekst */
+.intro p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #59655f;
+}
+
+
+/* ==================================================
+   DIERENKAARTEN
+   ================================================== */
+
+.dieren-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+
+    margin-bottom: 80px;
+}
+
+
+/* Een kaart */
+.dier-card {
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(32, 54, 45, 0.12);
+
+    transition: 0.3s;
+}
+
+
+/* Kaart omhoog bij hover */
+.dier-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 35px rgba(32, 54, 45, 0.18);
+}
+
+
+/* Afbeelding van het dier */
+.dier-card img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Tekstgedeelte van kaart */
+.card-content {
+    padding: 30px;
+}
+
+
+/* Klein label */
+.card-label {
+    color: #2f765c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Titel van dier */
+.card-content h3 {
+    font-size: 32px;
+
+    color: #17372b;
+
+    margin: 10px 0 12px 0;
+}
+
+
+/* Beschrijving */
+.card-content p {
+    color: #5b6761;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* Link onderaan */
+.card-button {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #d77d24;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+/* Hover op link */
+.card-button:hover {
+    color: #17372b;
+
+    transform: translateX(5px);
+}
+
+
+/* ==================================================
+   INFORMATIESECTIE
+   ================================================== */
+
+.info-section {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 50px;
 
     align-items: center;
 
-    gap: 40px;
+    background-color: #dfece5;
 
-    background-color: white;
+    border-radius: 25px;
 
-    border-radius: 18px;
+    padding: 55px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 80px;
+}
+
+
+/* Tekst */
+.info-text h2 {
+    margin-top: 5px;
+}
+
+
+/* Paragrafen */
+.info-text p {
+    color: #52625a;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+/* Rechter informatiebox */
+.info-box {
+    background-color: #17372b;
+
+    color: white;
+
+    border-radius: 20px;
 
     padding: 35px;
 
-    margin: 30px auto;
-
-    max-width: 1000px;
+    text-align: center;
 }
 
 
-/* Afbeelding in de informatiekaart */
-.info-card img {
-    width: 420px;
-
-    max-width: 100%;
-
-    border-radius: 15px;
-
-    object-fit: cover;
+/* Groot icoon */
+.info-box span {
+    font-size: 45px;
 }
 
 
-/* Titel van de informatiekaart */
-.info-card h2 {
-    color: #173f35;
+/* Titel */
+.info-box h3 {
+    font-size: 25px;
 
-    font-size: 30px;
-
-    margin-top: 0;
+    margin: 15px 0 10px 0;
 }
 
 
-/* Tekst in de informatiekaart */
-.info-card p {
-    color: #333;
+/* Tekst */
+.info-box p {
+    line-height: 1.6;
 
-    line-height: 1.7;
-}
-
-
-/* ==================================================
-   AI-KAART
-   ================================================== */
-
-/* Witte kaart voor informatie over AI */
-.ai-vraag {
-    display: flex;
-
-    flex-direction: column;
-
-    background-color: white;
-
-    border-radius: 18px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
-    padding: 30px;
-
-    margin: 30px auto;
-
-    max-width: 800px;
-}
-
-
-/* Titel van een AI-vraag */
-.ai-vraag h2 {
-    margin-top: 0;
-
-    color: #173f35;
-}
-
-
-/* Tekst bij een AI-vraag */
-.ai-vraag p {
-    color: #333;
-
-    line-height: 1.7;
+    color: #e3eee8;
 }
 
 
@@ -351,207 +545,222 @@ main {
    VIDEO
    ================================================== */
 
-/* Witte kaart rondom de YouTube-video */
 .video-section {
-    background-color: white;
-
-    border-radius: 18px;
-
-    padding: 35px;
-
-    margin: 50px auto;
+    text-align: center;
 
     max-width: 900px;
 
-    text-align: center;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 80px auto;
 }
 
 
-/* Titel van het videogedeelte */
-.video-section h2 {
-    color: #173f35;
+/* Videotekst */
+.video-section > p:not(.section-label) {
+    color: #59655f;
+
+    line-height: 1.7;
+
+    font-size: 17px;
 }
 
 
-/* Zorgt ervoor dat de video netjes wordt weergegeven */
+/* Video-container */
 .video {
-    position: relative;
-
     width: 100%;
 
     aspect-ratio: 16 / 9;
 
-    margin-top: 25px;
+    margin-top: 30px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 
-/* De YouTube-video zelf */
+/* YouTube-video */
 .video iframe {
     width: 100%;
 
     height: 100%;
 
     border: none;
-
-    border-radius: 12px;
 }
 
 
 /* ==================================================
-   AFBEELDINGEN
+   FOOTER
    ================================================== */
 
-/* Algemene afbeeldingen in de hoofdinhoud */
-main img {
-    max-width: 100%;
-    height: auto;
+footer {
+    background-color: #12372a;
+
+    color: white;
+
+    padding: 55px 8% 25px 8%;
 }
 
 
-/* Afbeeldingen krijgen afgeronde hoeken */
-main img {
-    border-radius: 15px;
+/* Inhoud van footer */
+.footer-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 50px;
 }
 
 
-/* ==================================================
-   KOPPEN EN TEKST
-   ================================================== */
+/* Logo onderaan */
+.footer-logo {
+    font-size: 24px;
 
-/* Algemene tweede kop */
-h2 {
-    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
 }
 
 
-/* Gewone paragrafen */
-p {
-    font-size: 17px;
+/* Footer tekst */
+footer p {
+    color: #c9d8d0;
 
     line-height: 1.7;
 }
 
 
-/* ==================================================
-   CONTACT / FOOTER
-   ================================================== */
+/* Footer kop */
+footer h3 {
+    color: #f3b562;
 
-/* Onderkant van de website */
-footer {
-    background-color: #173f35;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 50px 20px;
-
-    margin-top: 60px;
+    font-size: 20px;
 }
 
 
-/* Titel in de footer */
-footer h2 {
-    color: white;
-}
+/* Copyright */
+.copyright {
+    max-width: 1100px;
 
+    margin: 40px auto 0 auto;
 
-/* Tekst in de footer */
-footer p {
-    line-height: 1.6;
-}
+    padding-top: 20px;
 
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 
-/* Links in de footer */
-footer a {
-    color: white;
+    color: #aebfb6;
 
-    text-decoration: underline;
+    font-size: 14px;
 }
 
 
 /* ==================================================
-   KNOPPEN
+   MOBIELE VERSIE
    ================================================== */
 
-/* Algemene knop */
-.button {
-    display: inline-block;
+@media (max-width: 850px) {
 
-    background-color: #2d765c;
-
-    color: white;
-
-    text-decoration: none;
-
-    padding: 12px 22px;
-
-    border-radius: 8px;
-
-    margin-top: 10px;
-
-    font-weight: bold;
-}
-
-
-/* Kleur wanneer je over de knop gaat */
-.button:hover {
-    background-color: #173f35;
-}
-
-
-/* ==================================================
-   RESPONSIVE DESIGN
-   ================================================== */
-
-/* Aanpassingen voor telefoons en kleine schermen */
-@media (max-width: 800px) {
-
-    /* Menu-items komen onder elkaar */
-    .top-level-menu > li {
-        width: 100%;
-        float: none;
-    }
-
-
-    /* Dropdownmenu neemt volledige breedte */
-    .second-level-menu {
-        position: static;
-
-        width: 100%;
-    }
-
-
-    /* Afbeelding en tekst komen onder elkaar */
-    .info-card {
+    /* Menu wordt onder elkaar gezet */
+    .navbar {
         flex-direction: column;
 
-        text-align: center;
+        padding: 20px;
     }
 
 
-    /* Afbeelding wordt breder op kleine schermen */
-    .info-card img {
-        width: 100%;
+    /* Logo */
+    .logo {
+        margin-bottom: 15px;
     }
 
 
-    /* Titel wordt iets kleiner */
+    /* Menu */
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    /* Menu-items */
+    .menu > li > a {
+        padding: 15px 12px;
+    }
+
+
+    /* Dropdown */
+    .dropdown-menu {
+        top: 50px;
+    }
+
+
+    /* Hero */
     .hero h1 {
-        font-size: 36px;
+        font-size: 42px;
     }
 
 
-    /* Hero wordt iets kleiner */
+    /* Dierenkaarten onder elkaar */
+    .dieren-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Informatiesectie */
+    .info-section {
+        grid-template-columns: 1fr;
+
+        padding: 35px;
+    }
+
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================================================
+   EXTRA KLEIN SCHERM
+   ================================================== */
+
+@media (max-width: 550px) {
+
     .hero {
-        min-height: 350px;
+        min-height: 500px;
     }
 
 
-    /* Hoofdinhoud krijgt minder ruimte */
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero-tekst {
+        font-size: 16px;
+    }
+
+
     main {
-        padding: 40px 15px;
+        padding: 55px 18px;
     }
+
+
+    .intro h2,
+    .info-section h2,
+    .video-section h2 {
+        font-size: 32px;
+    }
+
+
+    .card-content {
+        padding: 25px;
+    }
+
 }
