@@ -1,218 +1,512 @@
-```html
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
+
+    <!-- Titel van de pagina -->
+    <title>Binair stelsel | Dierenwereld</title>
+
+    <!-- Zorgt ervoor dat Nederlandse tekens goed werken -->
     <meta charset="utf-8">
 
-    <!-- Titel van de website -->
-    <title>Mijn ICT-website</title>
+    <!-- Verbindt deze pagina met mijn CSS -->
+    <link rel="stylesheet" type="text/css" href="layout.css">
 
-    <!-- Koppeling met het CSS-bestand -->
-    <link rel="stylesheet" href="layout.css">
+    <!-- Zorgt ervoor dat de website goed werkt op mobiel -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         NAVIGATIE
-         ========================= -->
 
-    <nav class="navbar">
+    <!-- ==================================================
+         MENU
+         ================================================== -->
 
-        <!-- Naam/logo van de website -->
-        <div class="logo">
-            ICT-WERELD
+    <ul class="top-level-menu">
+
+        <!-- Home -->
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+
+        <!-- Gorilla -->
+        <li>
+
+            <a href="#">Gorilla</a>
+
+            <ul class="second-level-menu">
+
+                <li>
+                    <a href="#">Geschiedenis</a>
+                </li>
+
+                <li>
+                    <a href="voeding.html">Voeding</a>
+                </li>
+
+                <li>
+                    <a href="#">Leefgebied</a>
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- Flamingo -->
+        <li>
+
+            <a href="#">Flamingo</a>
+
+            <ul class="second-level-menu">
+
+                <li>
+                    <a href="#">Geschiedenis</a>
+                </li>
+
+                <li>
+                    <a href="#">Voeding</a>
+                </li>
+
+                <li>
+                    <a href="#">Leefgebied</a>
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- Onderwerpen -->
+        <li>
+
+            <a href="#">Onderwerpen</a>
+
+            <ul class="second-level-menu">
+
+                <li>
+                    <a href="invoer-uitvoer.html">
+                        Invoer &amp; Uitvoer
+                    </a>
+                </li>
+
+                <li>
+                    <a href="binairstelsel.html">
+                        Binair stelsel
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kleurmodellen.html">
+                        Kleurmodellen
+                    </a>
+                </li>
+
+                <li>
+                    <a href="compressie.html">
+                        Compressie
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- AI -->
+        <li>
+            <a href="ai.html">AI</a>
+        </li>
+
+    </ul>
+
+
+
+    <!-- ==================================================
+         BOVENKANT VAN DE PAGINA
+         ================================================== -->
+
+    <header class="binary-hero">
+
+        <!-- Decoratieve binaire cijfers -->
+        <div class="binary-background">
+            01001001 00110110 01100001
+            01010010 00110001 01001010
         </div>
 
-        <!-- Hoofdmenu -->
-        <ul class="menu">
 
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+        <div class="binary-hero-content">
 
-            <!-- Dropdownmenu -->
-            <li class="dropdown">
-                <a href="#">Onderwerpen ▾</a>
-
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="invoer-uitvoer.html">Invoer & uitvoer</a>
-                    </li>
-
-                    <li>
-                        <a href="binairstelsel.html">Binair stelsel</a>
-                    </li>
-
-                    <li>
-                        <a href="kleurmodellen.html">Kleurmodellen</a>
-                    </li>
-
-                    <li>
-                        <a href="compressie.html">Compressie</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="ai.html">AI</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-
-        </ul>
-    </nav>
-
-
-    <!-- =========================
-         WELKOMSTGEDEELTE
-         ========================= -->
-
-    <header class="hero">
-
-        <div class="hero-content">
-
-            <p class="kleine-titel">MIJN ICT-WEBSITE</p>
-
-            <h1>Welkom in de wereld van ICT</h1>
-
-            <p>
-                Op deze website vertel ik over verschillende onderwerpen
-                uit de informatica en wat ik hierover heb geleerd.
+            <p class="binary-label">
+                ICT • DATA • COMPUTERS
             </p>
 
-            <a class="knop" href="#onderwerpen">
-                Bekijk de onderwerpen
-            </a>
+            <h1>
+                Het binaire stelsel
+            </h1>
+
+            <p>
+                Computers werken met nullen en enen.
+                Maar hoe werkt dat precies?
+            </p>
 
         </div>
 
     </header>
 
 
-    <!-- =========================
-         OVER MIJ
-         ========================= -->
 
-    <main>
+    <!-- ==================================================
+         HOOFDINHOUD
+         ================================================== -->
 
-        <section class="intro">
-
-            <!-- Afbeelding -->
-            <div class="foto">
-
-                <!-- Vervang deze afbeelding door je eigen afbeelding -->
-                <img src="afbeeldingen/computer.jpg"
-                     alt="Een computer">
-
-            </div>
+    <main class="binary-main">
 
 
-            <!-- Informatietekst -->
-            <div class="tekst">
+        <!-- Introductie -->
 
-                <p class="kleine-titel">OVER MIJ</p>
+        <section class="binary-intro">
 
-                <h2>Wie ben ik?</h2>
-
-                <p>
-                    Mijn naam is <strong>[jouw naam]</strong>.
-                    Op deze website laat ik zien wat ik heb geleerd
-                    over ICT en informatica.
-                </p>
-
-                <p>
-                    Ik behandel verschillende onderwerpen zoals het
-                    binaire stelsel, invoer en uitvoer, kleurmodellen,
-                    compressie en kunstmatige intelligentie.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             ONDERWERPEN
-             ========================= -->
-
-        <section id="onderwerpen" class="onderwerpen">
-
-            <p class="kleine-titel">MIJN ONDERWERPEN</p>
-
-            <h2>Wat kun je hier vinden?</h2>
-
-            <div class="kaarten">
-
-                <div class="kaart">
-                    <span>01</span>
-                    <h3>Invoer & uitvoer</h3>
-                    <p>
-                        Hoe een computer informatie ontvangt,
-                        verwerkt en weer uitvoert.
-                    </p>
-                </div>
-
-                <div class="kaart">
-                    <span>02</span>
-                    <h3>Binair stelsel</h3>
-                    <p>
-                        Hoe computers informatie opslaan met
-                        nullen en enen.
-                    </p>
-                </div>
-
-                <div class="kaart">
-                    <span>03</span>
-                    <h3>Kleurmodellen</h3>
-                    <p>
-                        Hoe digitale apparaten kleuren
-                        weergeven en combineren.
-                    </p>
-                </div>
-
-                <div class="kaart">
-                    <span>04</span>
-                    <h3>Compressie</h3>
-                    <p>
-                        Hoe bestanden kleiner kunnen worden
-                        gemaakt.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             VIDEO
-             ========================= -->
-
-        <section class="video">
-
-            <p class="kleine-titel">VIDEO</p>
-
-            <h2>Een video over ICT</h2>
-
-            <p>
-                Hieronder komt een korte video die bij het onderwerp
-                past. Ik heb deze video gekozen omdat hij het onderwerp
-                op een duidelijke en begrijpelijke manier uitlegt.
+            <p class="binary-small-title">
+                DE BASIS
             </p>
 
-            <!--
-                Vervang de link hieronder door de embed-link
-                van jouw YouTube-video.
-            -->
+            <h2>
+                Wat is binair?
+            </h2>
 
-            <div class="video-box">
+            <p>
+                Het binaire stelsel is een getallenstelsel dat alleen
+                gebruikmaakt van twee cijfers: <strong>0</strong> en
+                <strong>1</strong>.
+            </p>
+
+            <p>
+                Computers gebruiken het binaire stelsel omdat computers
+                met elektronische signalen werken. Zo kan een signaal
+                bijvoorbeeld <strong>aan</strong> of <strong>uit</strong>
+                zijn.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             0 EN 1
+             ================================================== -->
+
+        <section class="binary-two-columns">
+
+
+            <div class="binary-card zero-card">
+
+                <div class="binary-number">
+                    0
+                </div>
+
+                <h3>
+                    Nul
+                </h3>
+
+                <p>
+                    Een 0 kan bijvoorbeeld betekenen dat een
+                    elektrisch signaal uit staat.
+                </p>
+
+            </div>
+
+
+            <div class="binary-card one-card">
+
+                <div class="binary-number">
+                    1
+                </div>
+
+                <h3>
+                    Eén
+                </h3>
+
+                <p>
+                    Een 1 kan bijvoorbeeld betekenen dat een
+                    elektrisch signaal aan staat.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             DECIMAAL VS BINair
+             ================================================== -->
+
+        <section class="conversion-section">
+
+            <p class="binary-small-title">
+                GETALLENSTELSELS
+            </p>
+
+            <h2>
+                Decimaal en binair
+            </h2>
+
+            <p>
+                Wij gebruiken normaal gesproken het
+                <strong>decimale stelsel</strong>. Dit stelsel
+                heeft tien cijfers: 0 tot en met 9.
+            </p>
+
+            <p>
+                Het binaire stelsel heeft maar twee cijfers:
+                0 en 1.
+            </p>
+
+
+            <!-- Voorbeeld -->
+
+            <div class="conversion-box">
+
+                <div class="conversion-number">
+                    13
+                </div>
+
+                <div class="conversion-arrow">
+                    →
+                </div>
+
+                <div class="conversion-number binary-result">
+                    1101
+                </div>
+
+            </div>
+
+            <p class="conversion-caption">
+                Het decimale getal 13 is in het binaire stelsel
+                <strong>1101</strong>.
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PLAATSWAARDEN
+             ================================================== -->
+
+        <section class="place-section">
+
+            <p class="binary-small-title">
+                HOE WERKT HET?
+            </p>
+
+            <h2>
+                De machten van 2
+            </h2>
+
+            <p>
+                Bij binaire getallen heeft iedere positie een
+                bepaalde waarde. Deze waarden zijn machten van 2.
+            </p>
+
+
+            <div class="binary-table">
+
+                <div class="table-row table-header">
+
+                    <div>
+                        2<sup>3</sup>
+                    </div>
+
+                    <div>
+                        2<sup>2</sup>
+                    </div>
+
+                    <div>
+                        2<sup>1</sup>
+                    </div>
+
+                    <div>
+                        2<sup>0</sup>
+                    </div>
+
+                </div>
+
+
+                <div class="table-row">
+
+                    <div>
+                        8
+                    </div>
+
+                    <div>
+                        4
+                    </div>
+
+                    <div>
+                        2
+                    </div>
+
+                    <div>
+                        1
+                    </div>
+
+                </div>
+
+
+                <div class="table-row binary-digits">
+
+                    <div>
+                        1
+                    </div>
+
+                    <div>
+                        1
+                    </div>
+
+                    <div>
+                        0
+                    </div>
+
+                    <div>
+                        1
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="example-explanation">
+                Bij <strong>1101</strong> tellen we de waarden op
+                waar een 1 staat:
+                <br><br>
+
+                <strong>
+                    8 + 4 + 0 + 1 = 13
+                </strong>
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             BIT EN BYTE
+             ================================================== -->
+
+        <section class="bit-byte-section">
+
+
+            <div class="bit-card">
+
+                <div class="bit-icon">
+                    01
+                </div>
+
+                <h3>
+                    Bit
+                </h3>
+
+                <p>
+                    Een bit is de kleinste hoeveelheid informatie
+                    in een computer. Een bit kan een 0 of een 1 zijn.
+                </p>
+
+            </div>
+
+
+            <div class="bit-card">
+
+                <div class="bit-icon">
+                    01010101
+                </div>
+
+                <h3>
+                    Byte
+                </h3>
+
+                <p>
+                    Acht bits samen vormen één byte. Met bytes
+                    kunnen computers bijvoorbeeld tekst en andere
+                    gegevens opslaan.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ==================================================
+             INTERESSANT FEIT
+             ================================================== -->
+
+        <section class="binary-fact">
+
+            <div class="fact-symbol">
+                !
+            </div>
+
+            <div>
+
+                <p class="binary-small-title">
+                    WIST JE DAT?
+                </p>
+
+                <h2>
+                    Computers denken niet zoals mensen
+                </h2>
+
+                <p>
+                    Een computer ziet geen gewone getallen zoals
+                    wij die zien. Uiteindelijk worden gegevens in
+                    de computer opgeslagen en verwerkt als reeksen
+                    van bits: nullen en enen.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             VIDEO
+             ================================================== -->
+
+        <section class="binary-video">
+
+            <p class="binary-small-title">
+                VIDEO
+            </p>
+
+            <h2>
+                Binair uitgelegd
+            </h2>
+
+            <p>
+                Ik heb deze video gekozen omdat het binaire stelsel
+                op een eenvoudige manier wordt uitgelegd. Ik heb
+                de video bekeken en vond hem handig om het onderwerp
+                beter te begrijpen.
+            </p>
+
+
+            <div class="binary-video-box">
+
+                <!-- Vervang VIDEO-ID door de ID van jouw YouTube-video -->
 
                 <iframe
                     src="https://www.youtube.com/embed/VIDEO-ID"
-                    title="YouTube video"
+                    title="Uitleg over het binaire stelsel"
                     allowfullscreen>
                 </iframe>
 
@@ -220,40 +514,30 @@
 
         </section>
 
+
     </main>
 
 
-    <!-- =========================
-         CONTACT
-         ========================= -->
 
-    <footer id="contact">
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
 
-        <div class="contact">
+    <footer>
 
-            <p class="kleine-titel">CONTACT</p>
+        <h2>
+            Dierenwereld
+        </h2>
 
-            <h2>Vragen of opmerkingen?</h2>
-
-            <p>
-                Bedankt voor het bekijken van mijn website!
-                Hier kun je eventueel je contactgegevens of
-                een link plaatsen.
-            </p>
-
-            <p>
-                📧 E-mail: jouwmail@example.com
-            </p>
-
-        </div>
-
-        <div class="copyright">
-            © 2026 Mijn ICT-website
-        </div>
+        <p>
+            Meer informatie over de andere onderwerpen vind je
+            via het menu bovenaan.
+        </p>
 
     </footer>
 
+
 </body>
+
 </html>
-```
 
