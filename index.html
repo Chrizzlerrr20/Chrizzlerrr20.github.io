@@ -2,20 +2,20 @@
 <html lang="nl">
 
 <head>
-    <!-- Dit is de titel die bovenaan het browsertabblad staat -->
-    <title>Mijn ICT-website</title>
+    <!-- Titel van de website -->
+    <title>Dierenwereld</title>
 
-    <!-- Zorgt ervoor dat Nederlandse tekens goed worden weergegeven -->
+    <!-- Zorgt ervoor dat speciale tekens goed werken -->
     <meta charset="utf-8">
 
-    <!-- Koppelt de CSS aan deze pagina -->
+    <!-- Koppelt de CSS -->
     <link rel="stylesheet" type="text/css" href="layout.css">
 </head>
 
 <body>
 
     <!-- ==================================================
-         HOOFDMENU
+         MENU
          ================================================== -->
 
     <ul class="top-level-menu">
@@ -25,7 +25,49 @@
             <a href="index.html">Home</a>
         </li>
 
-        <!-- Dropdownmenu -->
+        <!-- Gorilla -->
+        <li>
+            <a href="#">🦍 Gorilla ▾</a>
+
+            <ul class="second-level-menu">
+
+                <li>
+                    <a href="#">Geschiedenis</a>
+                </li>
+
+                <li>
+                    <a href="voeding.html">Voeding</a>
+                </li>
+
+                <li>
+                    <a href="#">Leefgebied</a>
+                </li>
+
+            </ul>
+        </li>
+
+        <!-- Flamingo -->
+        <li>
+            <a href="#">🦩 Flamingo ▾</a>
+
+            <ul class="second-level-menu">
+
+                <li>
+                    <a href="#">Geschiedenis</a>
+                </li>
+
+                <li>
+                    <a href="kleurmodellen.html">Voeding</a>
+                </li>
+
+                <li>
+                    <a href="#">Leefgebied</a>
+                </li>
+
+            </ul>
+        </li>
+
+        <!-- Onderwerpen -->
         <li>
             <a href="#">Onderwerpen ▾</a>
 
@@ -58,11 +100,6 @@
             </ul>
         </li>
 
-        <!-- AI -->
-        <li>
-            <a href="ai.html">AI</a>
-        </li>
-
     </ul>
 
 
@@ -74,11 +111,11 @@
 
         <div>
 
-            <h1>Welkom op mijn ICT-website!</h1>
+            <h1>Welkom in de dierenwereld!</h1>
 
             <p>
-                Op deze website laat ik zien wat ik heb geleerd
-                over verschillende onderwerpen binnen ICT.
+                Op deze website leer je meer over verschillende
+                bijzondere dieren, zoals de gorilla en de flamingo.
             </p>
 
         </div>
@@ -87,32 +124,55 @@
 
 
     <!-- ==================================================
-         HOOFDINHOUD
+         INHOUD
          ================================================== -->
 
     <main>
 
-        <!-- Informatie over jezelf -->
         <section class="info-card">
 
             <img
-                src="afbeeldingen/computer.jpg"
-                alt="Een computer"
+                src="afbeeldingen/gorilla.jpg"
+                alt="Een gorilla"
             >
 
             <div>
 
-                <h2>Over mij</h2>
+                <h2>Over deze website</h2>
 
                 <p>
-                    Mijn naam is [jouw naam]. Op deze website
-                    vertel ik wat ik heb geleerd over ICT.
+                    Welkom op mijn website over dieren!
+                    Hier kun je informatie vinden over
+                    verschillende dieren en hun leefomgeving.
                 </p>
 
                 <p>
-                    Ik bespreek onder andere het binaire stelsel,
-                    kleurmodellen, compressie, invoer en uitvoer
-                    en kunstmatige intelligentie.
+                    Neem bijvoorbeeld een kijkje bij de
+                    gorilla of de flamingo via het menu
+                    bovenaan de pagina.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tweede dierenkaart -->
+
+        <section class="info-card">
+
+            <img
+                src="afbeeldingen/flamingo.jpg"
+                alt="Een flamingo"
+            >
+
+            <div>
+
+                <h2>Flamingo</h2>
+
+                <p>
+                    Flamingo's zijn opvallende vogels die
+                    bekendstaan om hun roze kleur en lange poten.
                 </p>
 
             </div>
@@ -126,19 +186,19 @@
 
         <section class="video-section">
 
-            <h2>Video</h2>
+            <h2>Video over dieren</h2>
 
             <p>
-                Ik heb deze video gekozen omdat hij het onderwerp
-                op een duidelijke en begrijpelijke manier uitlegt.
-                Ik heb de video bekeken.
+                Ik heb deze video gekozen omdat hij op een
+                duidelijke en leuke manier informatie geeft
+                over dieren. Ik heb de video bekeken.
             </p>
 
             <div class="video">
 
                 <iframe
                     src="https://www.youtube.com/embed/VIDEO-ID"
-                    title="YouTube video"
+                    title="Video over dieren"
                     allowfullscreen>
                 </iframe>
 
@@ -150,7 +210,7 @@
 
 
     <!-- ==================================================
-         CONTACTGEDEELTE
+         CONTACT
          ================================================== -->
 
     <footer>
