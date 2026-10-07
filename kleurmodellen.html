@@ -1,134 +1,210 @@
-<!DOCTYPE html> <!--dit is een menutablat-->
-<html>
+<!DOCTYPE html>
+<html lang="nl">
 <head>
-  <title>De flamingo</title>
-  <meta charset-"utf-8">
- <link rel="stylesheet" type="text/css" href="layout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleurmodellen</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: #f3f4f6;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ef4444, #8b5cf6, #06b6d4);
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .intro {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 6px solid #06b6d4;
+        }
+
+        .intro h2 {
+            color: #06b6d4;
+        }
+
+        .intro p {
+            text-align: center;
+            color: #d1d5db;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .rgb {
+            border: 2px solid #ef4444;
+        }
+
+        .cmyk {
+            border: 2px solid #06b6d4;
+        }
+
+        .hsl {
+            border: 2px solid #f59e0b;
+        }
+
+        .rgb h3 {
+            color: #ef4444;
+        }
+
+        .cmyk h3 {
+            color: #06b6d4;
+        }
+
+        .hsl h3 {
+            color: #f59e0b;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin: 15px 0;
+        }
+
+        .card p {
+            color: #d1d5db;
+        }
+
+        .kleur-cirkel {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .rgb .kleur-cirkel {
+            background: linear-gradient(
+                135deg,
+                red,
+                green,
+                blue
+            );
+        }
+
+        .cmyk .kleur-cirkel {
+            background: linear-gradient(
+                135deg,
+                cyan,
+                magenta,
+                yellow,
+                black
+            );
+        }
+
+        .hsl .kleur-cirkel {
+            background: linear-gradient(
+                135deg,
+                red,
+                yellow,
+                green,
+                cyan,
+                blue,
+                magenta,
+                red
+            );
+        }
+
+        .vergelijking {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #7c3aed;
+            padding: 15px;
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #374151;
+        }
+
+        tr:hover {
+            background: #374151;
+        }
+
+        footer {
+            background: #0b1120;
+            text-align: center;
+            padding: 25px;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
-<style>
-body {
-  background-color: rgb(234, 171, 216);
-}
-
-h1 {
-  color: white;
-  text-align: center;
-}
-
-p {
-  
- 
-}
-</style>
-
 <body>
- <!-- ==================================================
-     NAVIGATIE
-     ================================================== -->
-
-<nav class="navbar">
-
-    <!-- Naam/logo van de website -->
-    <div class="logo">
-        🐾 Dierenwereld
-    </div>
-
-    <!-- Hoofdmenu -->
-    <ul class="menu">
-
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-
-        <!-- Gorilla dropdown -->
-        <li class="dropdown">
-            <a href="#">Gorilla ▾</a>
-
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="#">Geschiedenis</a>
-                </li>
-
-                <li>
-                    <a href="voeding.html">Voeding</a>
-                </li>
-
-                <li>
-                    <a href="#">Leefgebied</a>
-                </li>
-            </ul>
-        </li>
-
-        <!-- Flamingo dropdown -->
-        <li class="dropdown">
-            <a href="#">Flamingo ▾</a>
-
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="#">Geschiedenis</a>
-                </li>
-
-                <li>
-                    <a href="#">Voeding</a>
-                </li>
-
-                <li>
-                    <a href="#">Leefgebied</a>
-                </li>
-            </ul>
-        </li>
-
-        <!-- Onderwerpen dropdown -->
-        <li class="dropdown">
-            <a href="#">Onderwerpen ▾</a>
-
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="invoer-uitvoer.html">
-                        Invoer &amp; Uitvoer
-                    </a>
-                </li>
-
-                <li>
-                    <a href="binairstelsel.html">
-                        Binair stelsel
-                    </a>
-                </li>
-
-                <li>
-                    <a href="kleurmodellen.html">
-                        Kleurmodellen
-                    </a>
-                </li>
-
-                <li>
-                    <a href="compressie.html">
-                        Compressie
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="ai.html">AI</a>
-        </li>
-
-    </ul>
-
-</nav>
- 
-
- <p></p>
-
-    
-
-
 
     <header>
         <h1>Kleurmodellen</h1>
-        <p>Ontdek hoe kleuren worden opgebouwd en weergegeven in digitale media.</p>
+        <p>Ontdek hoe kleuren worden opgebouwd</p>
     </header>
 
     <main>
@@ -136,12 +212,12 @@ p {
         <section class="intro">
             <h2>Wat zijn kleurmodellen?</h2>
             <p>
-                Een kleurmodel is een manier om kleuren te beschrijven en weer te geven
-                met behulp van verschillende kleuren of kleurwaarden.
+                Een kleurmodel is een manier om kleuren te beschrijven
+                en weer te geven met verschillende kleurwaarden.
             </p>
         </section>
 
-        <section class="kleurmodellen">
+        <section>
             <h2>De belangrijkste kleurmodellen</h2>
 
             <div class="cards">
@@ -150,78 +226,67 @@ p {
                     <div class="kleur-cirkel">RGB</div>
                     <h3>RGB</h3>
                     <p>
-                        RGB staat voor <strong>Rood, Groen en Blauw</strong>.
-                        Dit kleurmodel wordt vooral gebruikt voor schermen,
-                        zoals computers, telefoons en televisies.
+                        RGB staat voor Rood, Groen en Blauw.
+                        Dit wordt vooral gebruikt voor schermen.
                     </p>
-                    <p><strong>Voorbeeld:</strong> RGB(255, 0, 0) = rood</p>
                 </article>
 
                 <article class="card cmyk">
                     <div class="kleur-cirkel">CMYK</div>
                     <h3>CMYK</h3>
                     <p>
-                        CMYK staat voor <strong>Cyaan, Magenta, Geel en Zwart</strong>.
-                        Het wordt voornamelijk gebruikt voor drukwerk.
+                        CMYK staat voor Cyaan, Magenta, Geel en Zwart.
+                        Dit wordt vooral gebruikt voor drukwerk.
                     </p>
-                    <p><strong>Voorbeeld:</strong> posters, flyers en tijdschriften.</p>
                 </article>
 
                 <article class="card hsl">
                     <div class="kleur-cirkel">HSL</div>
                     <h3>HSL</h3>
                     <p>
-                        HSL staat voor <strong>Hue, Saturation en Lightness</strong>.
-                        Hiermee kun je een kleur beschrijven op basis van tint,
-                        verzadiging en helderheid.
+                        HSL staat voor Hue, Saturation en Lightness.
+                        Hiermee kun je kleuren nauwkeurig beschrijven.
                     </p>
-                    <p><strong>Voorbeeld:</strong> HSL(0, 100%, 50%) = rood</p>
                 </article>
 
             </div>
         </section>
 
         <section class="vergelijking">
-            <h2>RGB en CMYK vergelijken</h2>
+            <h2>Vergelijking</h2>
 
             <table>
-                <thead>
-                    <tr>
-                        <th>Kleurmodel</th>
-                        <th>Gebruik</th>
-                        <th>Opbouw</th>
-                    </tr>
-                </thead>
+                <tr>
+                    <th>Kleurmodel</th>
+                    <th>Gebruik</th>
+                    <th>Opbouw</th>
+                </tr>
 
-                <tbody>
-                    <tr>
-                        <td>RGB</td>
-                        <td>Schermen</td>
-                        <td>Rood, Groen, Blauw</td>
-                    </tr>
+                <tr>
+                    <td>RGB</td>
+                    <td>Schermen</td>
+                    <td>Rood, Groen, Blauw</td>
+                </tr>
 
-                    <tr>
-                        <td>CMYK</td>
-                        <td>Drukwerk</td>
-                        <td>Cyaan, Magenta, Geel, Zwart</td>
-                    </tr>
+                <tr>
+                    <td>CMYK</td>
+                    <td>Drukwerk</td>
+                    <td>Cyaan, Magenta, Geel, Zwart</td>
+                </tr>
 
-                    <tr>
-                        <td>HSL</td>
-                        <td>Webdesign & digitale toepassingen</td>
-                        <td>Tint, Verzadiging, Helderheid</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <td>HSL</td>
+                    <td>Webdesign</td>
+                    <td>Tint, Verzadiging, Helderheid</td>
+                </tr>
             </table>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 - Kleurmodellen | Gemaakt voor een HTML-project</p>
+        <p>&copy; 2026 - Kleurmodellen</p>
     </footer>
-
-
 
 </body>
 </html>
