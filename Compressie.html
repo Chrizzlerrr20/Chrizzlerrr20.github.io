@@ -1,0 +1,431 @@
+```html
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compressie - Bitmap en Vector</title>
+</head>
+
+<body>
+
+    <!-- ==================================================
+     NAVIGATIE
+     ================================================== -->
+
+<nav class="navbar">
+
+    <!-- Naam/logo van de website -->
+    <div class="logo">
+        🐾 Dierenwereld
+    </div>
+
+    <!-- Hoofdmenu -->
+    <ul class="menu">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <!-- Gorilla dropdown -->
+        <li class="dropdown">
+            <a href="#">Gorilla ▾</a>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">Geschiedenis</a>
+                </li>
+
+                <li>
+                    <a href="voeding.html">Voeding</a>
+                </li>
+
+                <li>
+                    <a href="#">Leefgebied</a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Flamingo dropdown -->
+        <li class="dropdown">
+            <a href="#">Flamingo ▾</a>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#">Geschiedenis</a>
+                </li>
+
+                <li>
+                    <a href="#">Voeding</a>
+                </li>
+
+                <li>
+                    <a href="#">Leefgebied</a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Onderwerpen dropdown -->
+        <li class="dropdown">
+            <a href="#">Onderwerpen ▾</a>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="invoer-uitvoer.html">
+                        Invoer &amp; Uitvoer
+                    </a>
+                </li>
+
+                <li>
+                    <a href="binairstelsel.html">
+                        Binair stelsel
+                    </a>
+                </li>
+
+                <li>
+                    <a href="kleurmodellen.html">
+                        Kleurmodellen
+                    </a>
+                </li>
+
+                <li>
+                    <a href="compressie.html">
+                        Compressie
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="ai.html">AI</a>
+        </li>
+
+    </ul>
+
+</nav>
+    <hr>
+
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+        <h1>Compressie: Bitmap en Vector</h1>
+
+        <p>
+            Leer hoe afbeeldingen worden opgeslagen en
+            kleiner kunnen worden gemaakt.
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             WAT IS COMPRESSIE?
+             ========================= -->
+
+        <section>
+
+            <h2>Wat is compressie?</h2>
+
+            <p>
+                Compressie is het kleiner maken van een bestand.
+                Hierdoor neemt het bestand minder opslagruimte in
+                en kan het sneller worden verzonden via internet.
+            </p>
+
+            <p>
+                Bij afbeeldingen kan compressie ervoor zorgen dat
+                een afbeelding veel minder opslagruimte nodig heeft.
+            </p>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- =========================
+             BITMAP
+             ========================= -->
+
+        <section>
+
+            <h2>Bitmapafbeeldingen</h2>
+
+            <p>
+                Een bitmapafbeelding bestaat uit heel veel kleine
+                puntjes. Deze puntjes noemen we pixels.
+            </p>
+
+            <p>
+                Elke pixel bevat informatie over de kleur.
+                Samen vormen alle pixels de afbeelding.
+            </p>
+
+
+            <h3>Voorbeelden van bitmapafbeeldingen</h3>
+
+            <ul>
+                <li>Foto's</li>
+                <li>Screenshots</li>
+                <li>Digitale schilderijen</li>
+                <li>PNG-afbeeldingen</li>
+                <li>JPEG-afbeeldingen</li>
+            </ul>
+
+
+            <h3>Voordelen</h3>
+
+            <ul>
+                <li>Geschikt voor foto's.</li>
+                <li>Kan veel verschillende kleuren bevatten.</li>
+                <li>Veel details zijn mogelijk.</li>
+            </ul>
+
+
+            <h3>Nadelen</h3>
+
+            <ul>
+                <li>
+                    Bij sterk vergroten kunnen pixels zichtbaar worden.
+                </li>
+
+                <li>
+                    Grote afbeeldingen kunnen veel opslagruimte innemen.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- =========================
+             VECTOR
+             ========================= -->
+
+        <section>
+
+            <h2>Vectorafbeeldingen</h2>
+
+            <p>
+                Een vectorafbeelding wordt niet opgebouwd uit pixels.
+                Een vectorafbeelding bestaat uit lijnen, vormen,
+                punten en wiskundige berekeningen.
+            </p>
+
+            <p>
+                Hierdoor kan een vectorafbeelding worden vergroot
+                zonder dat de afbeelding onscherp wordt.
+            </p>
+
+
+            <h3>Voorbeelden van vectorafbeeldingen</h3>
+
+            <ul>
+                <li>Logo's</li>
+                <li>Pictogrammen</li>
+                <li>Illustraties</li>
+                <li>Technische tekeningen</li>
+                <li>SVG-afbeeldingen</li>
+            </ul>
+
+
+            <h3>Voordelen</h3>
+
+            <ul>
+                <li>
+                    Kan onbeperkt worden vergroot zonder pixelvorming.
+                </li>
+
+                <li>
+                    Vaak geschikt voor logo's en eenvoudige afbeeldingen.
+                </li>
+
+                <li>
+                    Een eenvoudige vectorafbeelding kan klein zijn qua bestandsgrootte.
+                </li>
+            </ul>
+
+
+            <h3>Nadelen</h3>
+
+            <ul>
+                <li>
+                    Minder geschikt voor realistische foto's.
+                </li>
+
+                <li>
+                    Zeer complexe vectorafbeeldingen kunnen groot worden.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- =========================
+             BITMAP VS VECTOR
+             ========================= -->
+
+        <section>
+
+            <h2>Bitmap tegenover vector</h2>
+
+            <table border="1">
+
+                <tr>
+                    <th>Eigenschap</th>
+                    <th>Bitmap</th>
+                    <th>Vector</th>
+                </tr>
+
+                <tr>
+                    <td>Opbouw</td>
+                    <td>Pixels</td>
+                    <td>Lijnen, punten en vormen</td>
+                </tr>
+
+                <tr>
+                    <td>Vergroten</td>
+                    <td>Kan onscherp worden</td>
+                    <td>Blijft scherp</td>
+                </tr>
+
+                <tr>
+                    <td>Geschikt voor</td>
+                    <td>Foto's</td>
+                    <td>Logo's en tekeningen</td>
+                </tr>
+
+                <tr>
+                    <td>Voorbeelden</td>
+                    <td>JPG, PNG, GIF</td>
+                    <td>SVG</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- =========================
+             COMPRESSIE
+             ========================= -->
+
+        <section>
+
+            <h2>Compressie van afbeeldingen</h2>
+
+            <p>
+                Er zijn verschillende manieren om afbeeldingen
+                kleiner te maken. Hierbij wordt onderscheid gemaakt
+                tussen verliesvrije en verliesgevende compressie.
+            </p>
+
+
+            <h3>Verliesvrije compressie</h3>
+
+            <p>
+                Bij verliesvrije compressie gaat er geen informatie
+                verloren. Na het uitpakken kan de oorspronkelijke
+                afbeelding volledig worden hersteld.
+            </p>
+
+            <p>
+                Een voorbeeld hiervan is PNG.
+            </p>
+
+
+            <h3>Verliesgevende compressie</h3>
+
+            <p>
+                Bij verliesgevende compressie wordt bepaalde informatie
+                verwijderd om het bestand veel kleiner te maken.
+            </p>
+
+            <p>
+                JPEG gebruikt bijvoorbeeld verliesgevende compressie.
+                Bij een sterke compressie kan de kwaliteit van een
+                afbeelding minder worden.
+            </p>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- =========================
+             SAMENVATTING
+             ========================= -->
+
+        <section>
+
+            <h2>Samenvatting</h2>
+
+            <ul>
+
+                <li>
+                    <strong>Bitmap</strong> bestaat uit pixels en is
+                    vooral geschikt voor foto's.
+                </li>
+
+                <li>
+                    <strong>Vector</strong> bestaat uit vormen en lijnen
+                    en is vooral geschikt voor logo's en tekeningen.
+                </li>
+
+                <li>
+                    <strong>Compressie</strong> maakt bestanden kleiner.
+                </li>
+
+                <li>
+                    <strong>Verliesvrije compressie</strong> verwijdert
+                    geen informatie.
+                </li>
+
+                <li>
+                    <strong>Verliesgevende compressie</strong> verwijdert
+                    een deel van de informatie om het bestand kleiner
+                    te maken.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <hr>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 - Dierenwereld
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
