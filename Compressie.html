@@ -2,706 +2,223 @@
 ```html
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compressie | Dierenwereld</title>
-
+    <title>Compressie - Dierenwereld</title>
     <link rel="stylesheet" type="text/css" href="layout.css">
 </head>
 
-<body bgcolor="#202938">
+<body bgcolor="#17241F">
 
-   <!-- ==================================================
-         NAVIGATIE
-         ================================================== -->
+    <header>
+        <table width="100%" bgcolor="#1F302B" cellpadding="20">
+            <tr>
+                <td align="center">
+                    <h1><font color="#E2ECE7">Compressie</font></h1>
+                    <p><font color="#BFCFC7">Bitmap, vector en compressie uitgelegd</font></p>
+                </td>
+            </tr>
+        </table>
+    </header>
 
-    <nav class="navbar">
-
-        <div class="logo">
-            🐾 Dierenwereld
-        </div>
-
+    <nav>
         <ul class="menu">
+            <li><a href="index.html">Home</a></li>
 
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <!-- Gorilla dropdown -->
             <li class="dropdown">
-
-                <a href="#">Gorilla ▾</a>
-
+                <a href="#">Gorilla</a>
                 <ul class="dropdown-menu">
-
-                    <li>
-                        <a href="#">Geschiedenis</a>
-                    </li>
-
-                    <li>
-                        <a href="voeding.html">Voeding</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Leefgebied</a>
-                    </li>
-
+                    <li><a href="gorilla-geschiedenis.html">Geschiedenis</a></li>
+                    <li><a href="gorilla-voeding.html">Voeding</a></li>
+                    <li><a href="gorilla-leefgebied.html">Leefgebied</a></li>
                 </ul>
-
             </li>
 
-
-            <!-- Flamingo dropdown -->
             <li class="dropdown">
-
-                <a href="#">Flamingo ▾</a>
-
+                <a href="#">Flamingo</a>
                 <ul class="dropdown-menu">
-
-                    <li>
-                        <a href="#">Geschiedenis</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Voeding</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Leefgebied</a>
-                    </li>
-
+                    <li><a href="flamingo-geschiedenis.html">Geschiedenis</a></li>
+                    <li><a href="flamingo-voeding.html">Voeding</a></li>
+                    <li><a href="flamingo-leefgebied.html">Leefgebied</a></li>
                 </ul>
-
             </li>
 
-
-            <!-- Onderwerpen dropdown -->
             <li class="dropdown">
-
-                <a href="#">Onderwerpen ▾</a>
-
+                <a href="#">Onderwerpen</a>
                 <ul class="dropdown-menu">
-
-                    <li>
-                        <a href="invoer-uitvoer.html">
-                            Invoer &amp; Uitvoer
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="binairstelsel.html">
-                            Binair stelsel
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="kleurmodellen.html">
-                            Kleurmodellen
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Compressie.html">
-                            Compressie
-                        </a>
-                    </li>
-
+                    <li><a href="invoer-uitvoer.html">Invoer & Uitvoer</a></li>
+                    <li><a href="binair.html">Binair stelsel</a></li>
+                    <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
+                    <li><a href="compressie.html">Compressie</a></li>
                 </ul>
-
             </li>
 
-
-            <li>
-                <a href="ai.html">AI</a>
-            </li>
-
+            <li><a href="ai.html">AI</a></li>
         </ul>
-
     </nav>
 
+    <main>
 
-    <!-- ==================================================
-         HEADER
-         ================================================== -->
+        <table width="90%" align="center" cellpadding="25" bgcolor="#263B34">
+            <tr>
+                <td>
+                    <h2><font color="#DCE9E3">Wat is compressie?</font></h2>
+                    <p>
+                        <font color="#C6D5CE">
+                            Compressie betekent dat een bestand kleiner wordt gemaakt.
+                            Hierdoor neemt het bestand minder opslagruimte in en kan het
+                            sneller worden verstuurd.
+                        </font>
+                    </p>
+                </td>
+            </tr>
+        </table>
 
-    <table width="100%" bgcolor="#29364A" cellpadding="45">
+        <br>
 
-        <tr>
-            <td align="center">
+        <table width="90%" align="center" cellpadding="25" bgcolor="#294139">
+            <tr>
+                <td width="50%">
+                    <h2><font color="#DCE9E3">Bitmap</font></h2>
+                    <p>
+                        <font color="#C6D5CE">
+                            Een bitmapafbeelding bestaat uit pixels. Elke pixel bevat
+                            informatie over een kleur.
+                        </font>
+                    </p>
 
-                <font color="#E8EDF3" size="6">
-                    <strong>Compressie</strong>
-                </font>
+                    <p>
+                        <font color="#C6D5CE">
+                            Als een afbeelding veel pixels bevat, kan het bestand groot
+                            worden. Door compressie kan de afbeelding kleiner worden.
+                        </font>
+                    </p>
 
-                <br><br>
+                    <p>
+                        <font color="#AFC8BC">
+                            Voorbeelden: JPG, PNG en GIF.
+                        </font>
+                    </p>
+                </td>
 
-                <font color="#B8C4D1" size="4">
-                    Bitmap en vector
-                </font>
+                <td width="50%" bgcolor="#314B40">
+                    <h2><font color="#DCE9E3">Vector</font></h2>
+                    <p>
+                        <font color="#C6D5CE">
+                            Een vectorafbeelding wordt opgebouwd uit lijnen, vormen en
+                            punten. Hierdoor blijft de afbeelding scherp wanneer je
+                            deze groter maakt.
+                        </font>
+                    </p>
 
-                <p>
-                    <font color="#AAB7C5">
-                        Leer hoe digitale afbeeldingen worden opgebouwd
-                        en hoe compressie de bestandsgrootte kan verkleinen.
-                    </font>
-                </p>
+                    <p>
+                        <font color="#C6D5CE">
+                            Vectorafbeeldingen zijn vooral handig voor logo's,
+                            pictogrammen en tekeningen.
+                        </font>
+                    </p>
 
-            </td>
-        </tr>
+                    <p>
+                        <font color="#AFC8BC">
+                            Voorbeelden: SVG en AI.
+                        </font>
+                    </p>
+                </td>
+            </tr>
+        </table>
 
-    </table>
+        <br>
 
+        <table width="90%" align="center" cellpadding="20" bgcolor="#202F2A">
+            <tr>
+                <td>
+                    <h2><font color="#DCE9E3">Bitmap of vector?</font></h2>
+
+                    <table width="100%" cellpadding="12" border="1">
+                        <tr bgcolor="#344D43">
+                            <th><font color="#E2ECE7">Bitmap</font></th>
+                            <th><font color="#E2ECE7">Vector</font></th>
+                        </tr>
+
+                        <tr bgcolor="#263B34">
+                            <td><font color="#C6D5CE">Bestaat uit pixels</font></td>
+                            <td><font color="#C6D5CE">Bestaat uit vormen en lijnen</font></td>
+                        </tr>
+
+                        <tr bgcolor="#2C4139">
+                            <td><font color="#C6D5CE">Kan onscherp worden bij vergroten</font></td>
+                            <td><font color="#C6D5CE">Blijft scherp bij vergroten</font></td>
+                        </tr>
+
+                        <tr bgcolor="#263B34">
+                            <td><font color="#C6D5CE">Geschikt voor foto's</font></td>
+                            <td><font color="#C6D5CE">Geschikt voor logo's</font></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table width="90%" align="center" cellpadding="25" bgcolor="#26352F">
+            <tr>
+                <td>
+                    <h2><font color="#DCE9E3">Compressie</font></h2>
+
+                    <p>
+                        <font color="#C6D5CE">
+                            Er zijn verschillende manieren om bestanden te comprimeren.
+                        </font>
+                    </p>
+
+                    <ul>
+                        <li><font color="#C6D5CE"><b>Lossless:</b> er gaat geen informatie verloren.</font></li>
+                        <li><font color="#C6D5CE"><b>Lossy:</b> er wordt informatie verwijderd om het bestand kleiner te maken.</font></li>
+                    </ul>
+
+                    <p>
+                        <font color="#AFC8BC">
+                            Bij foto's wordt vaak JPG gebruikt. Bij afbeeldingen waarbij
+                            kwaliteit belangrijk is, kan PNG een betere keuze zijn.
+                        </font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table width="90%" align="center" cellpadding="20" bgcolor="#1F302B">
+            <tr>
+                <td align="center">
+                    <h2><font color="#E2ECE7">Kort samengevat</font></h2>
+                    <p>
+                        <font color="#C6D5CE">
+                            Bitmap bestaat uit pixels, vector bestaat uit vormen en
+                            compressie zorgt ervoor dat bestanden minder ruimte innemen.
+                        </font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </main>
 
     <br>
 
-
-    <!-- ==================================================
-         INHOUD
-         ================================================== -->
-
-    <table width="85%" align="center" cellpadding="20">
-
-        <!-- Wat is compressie -->
-
-        <tr>
-            <td bgcolor="#2B3545">
-
-                <font color="#D8E2EE" size="5">
-                    <strong>Wat is compressie?</strong>
-                </font>
-
-                <hr color="#465366">
-
-                <font color="#D0D7E0">
-
-                    <p>
-                        Compressie is het kleiner maken van een bestand.
-                        Hierdoor neemt het bestand minder opslagruimte in
-                        en kan het sneller worden verzonden via internet.
-                    </p>
-
-                    <p>
-                        Bij afbeeldingen wordt compressie vaak gebruikt
-                        om de bestandsgrootte te verminderen zonder dat
-                        de afbeelding onnodig veel ruimte inneemt.
-                    </p>
-
-                </font>
-
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <br>
-            </td>
-        </tr>
-
-
-        <!-- Bitmap -->
-
-        <tr>
-            <td bgcolor="#263A52">
-
-                <font color="#72A9D8" size="5">
-                    <strong>Bitmapafbeeldingen</strong>
-                </font>
-
-                <hr color="#3F5872">
-
-                <font color="#D2DCE7">
-
-                    <p>
-                        Een bitmapafbeelding bestaat uit heel veel kleine
-                        puntjes. Deze puntjes noemen we pixels.
-                    </p>
-
-                    <p>
-                        Elke pixel bevat informatie over de kleur.
-                        Samen vormen alle pixels de volledige afbeelding.
-                    </p>
-
-                </font>
-
-
-                <font color="#72A9D8">
-                    <h3>Voorbeelden</h3>
-                </font>
-
-                <font color="#D2DCE7">
-
-                    <ul>
-                        <li>Foto's</li>
-                        <li>Screenshots</li>
-                        <li>Digitale schilderijen</li>
-                        <li>PNG-afbeeldingen</li>
-                        <li>JPEG-afbeeldingen</li>
-                    </ul>
-
-                </font>
-
-
-                <font color="#72A9D8">
-                    <h3>Voordelen</h3>
-                </font>
-
-                <font color="#D2DCE7">
-
-                    <ul>
-                        <li>Geschikt voor foto's.</li>
-                        <li>Kan veel verschillende kleuren bevatten.</li>
-                        <li>Veel details zijn mogelijk.</li>
-                    </ul>
-
-                </font>
-
-
-                <font color="#72A9D8">
-                    <h3>Nadelen</h3>
-                </font>
-
-                <font color="#D2DCE7">
-
-                    <ul>
-                        <li>
-                            Bij sterk vergroten kunnen pixels zichtbaar worden.
-                        </li>
-
-                        <li>
-                            Grote afbeeldingen kunnen veel opslagruimte innemen.
-                        </li>
-                    </ul>
-
-                </font>
-
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <br>
-            </td>
-        </tr>
-
-
-        <!-- Vector -->
-
-        <tr>
-            <td bgcolor="#293E38">
-
-                <font color="#72C49A" size="5">
-                    <strong>Vectorafbeeldingen</strong>
-                </font>
-
-                <hr color="#45645A">
-
-                <font color="#D3E0DA">
-
-                    <p>
-                        Een vectorafbeelding wordt niet opgebouwd uit pixels.
-                        Een vectorafbeelding bestaat uit lijnen, vormen,
-                        punten en wiskundige berekeningen.
-                    </p>
-
-                    <p>
-                        Hierdoor kan een vectorafbeelding worden vergroot
-                        zonder dat de afbeelding onscherp wordt.
-                    </p>
-
-                </font>
-
-
-                <font color="#72C49A">
-                    <h3>Voorbeelden</h3>
-                </font>
-
-                <font color="#D3E0DA">
-
-                    <ul>
-                        <li>Logo's</li>
-                        <li>Pictogrammen</li>
-                        <li>Illustraties</li>
-                        <li>Technische tekeningen</li>
-                        <li>SVG-afbeeldingen</li>
-                    </ul>
-
-                </font>
-
-
-                <font color="#72C49A">
-                    <h3>Voordelen</h3>
-                </font>
-
-                <font color="#D3E0DA">
-
-                    <ul>
-                        <li>
-                            Kan worden vergroot zonder pixelvorming.
-                        </li>
-
-                        <li>
-                            Geschikt voor logo's en eenvoudige afbeeldingen.
-                        </li>
-
-                        <li>
-                            Een eenvoudige vectorafbeelding kan klein zijn
-                            qua bestandsgrootte.
-                        </li>
-                    </ul>
-
-                </font>
-
-
-                <font color="#72C49A">
-                    <h3>Nadelen</h3>
-                </font>
-
-                <font color="#D3E0DA">
-
-                    <ul>
-                        <li>
-                            Minder geschikt voor realistische foto's.
-                        </li>
-
-                        <li>
-                            Zeer complexe vectorafbeeldingen kunnen groot worden.
-                        </li>
-                    </ul>
-
-                </font>
-
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <br>
-            </td>
-        </tr>
-
-
-        <!-- Vergelijking -->
-
-        <tr>
-            <td bgcolor="#2B3545">
-
-                <font color="#D8E2EE" size="5">
-                    <strong>Bitmap tegenover vector</strong>
-                </font>
-
-                <hr color="#465366">
-
-                <table width="100%" border="1" cellpadding="12"
-                       cellspacing="0">
-
-                    <tr bgcolor="#172B4D">
-
-                        <th>
-                            <font color="#E8EDF3">
-                                Eigenschap
-                            </font>
-                        </th>
-
-                        <th>
-                            <font color="#E8EDF3">
-                                Bitmap
-                            </font>
-                        </th>
-
-                        <th>
-                            <font color="#E8EDF3">
-                                Vector
-                            </font>
-                        </th>
-
-                    </tr>
-
-                    <tr bgcolor="#354052">
-
-                        <td>
-                            <font color="#D9E0E8">
-                                <strong>Opbouw</strong>
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                Pixels
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                Lijnen, punten en vormen
-                            </font>
-                        </td>
-
-                    </tr>
-
-                    <tr bgcolor="#2E3848">
-
-                        <td>
-                            <font color="#D9E0E8">
-                                <strong>Vergroten</strong>
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                Kan onscherp worden
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                Blijft scherp
-                            </font>
-                        </td>
-
-                    </tr>
-
-                    <tr bgcolor="#354052">
-
-                        <td>
-                            <font color="#D9E0E8">
-                                <strong>Geschikt voor</strong>
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                Foto's
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                Logo's en tekeningen
-                            </font>
-                        </td>
-
-                    </tr>
-
-                    <tr bgcolor="#2E3848">
-
-                        <td>
-                            <font color="#D9E0E8">
-                                <strong>Voorbeelden</strong>
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                JPG, PNG, GIF
-                            </font>
-                        </td>
-
-                        <td>
-                            <font color="#D9E0E8">
-                                SVG
-                            </font>
-                        </td>
-
-                    </tr>
-
-                </table>
-
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <br>
-            </td>
-        </tr>
-
-
-        <!-- Compressie -->
-
-        <tr>
-            <td bgcolor="#403A2D">
-
-                <font color="#E0C477" size="5">
-                    <strong>Compressie van afbeeldingen</strong>
-                </font>
-
-                <hr color="#63583F">
-
-                <font color="#DCD7C9">
-
-                    <p>
-                        Er zijn verschillende manieren om afbeeldingen
-                        kleiner te maken. Hierbij wordt onderscheid gemaakt
-                        tussen verliesvrije en verliesgevende compressie.
-                    </p>
-
-                </font>
-
-
-                <table width="100%" cellpadding="15"
-                       bgcolor="#293E38">
-
-                    <tr>
-                        <td>
-
-                            <font color="#72C49A">
-                                <h3>Verliesvrije compressie</h3>
-                            </font>
-
-                            <font color="#D3E0DA">
-
-                                <p>
-                                    Bij verliesvrije compressie gaat er geen
-                                    informatie verloren. Na het uitpakken kan
-                                    de oorspronkelijke afbeelding volledig
-                                    worden hersteld.
-                                </p>
-
-                                <p>
-                                    Een voorbeeld hiervan is <strong>PNG</strong>.
-                                </p>
-
-                            </font>
-
-                        </td>
-                    </tr>
-
-                </table>
-
-
-                <br>
-
-
-                <table width="100%" cellpadding="15"
-                       bgcolor="#463335">
-
-                    <tr>
-                        <td>
-
-                            <font color="#D98282">
-                                <h3>Verliesgevende compressie</h3>
-                            </font>
-
-                            <font color="#E1D4D4">
-
-                                <p>
-                                    Bij verliesgevende compressie wordt bepaalde
-                                    informatie verwijderd om het bestand veel
-                                    kleiner te maken.
-                                </p>
-
-                                <p>
-                                    JPEG gebruikt bijvoorbeeld verliesgevende
-                                    compressie. Bij een sterke compressie kan
-                                    de kwaliteit van een afbeelding minder worden.
-                                </p>
-
-                            </font>
-
-                        </td>
-                    </tr>
-
-                </table>
-
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>
-                <br>
-            </td>
-        </tr>
-
-
-        <!-- Samenvatting -->
-
-        <tr>
-            <td bgcolor="#303947">
-
-                <font color="#D8E2EE" size="5">
-                    <strong>Samenvatting</strong>
-                </font>
-
-                <hr color="#4A5666">
-
-                <font color="#D2D9E2">
-
-                    <ul>
-
-                        <li>
-                            <strong>Bitmap</strong> bestaat uit pixels en is
-                            vooral geschikt voor foto's.
-                        </li>
-
-                        <li>
-                            <strong>Vector</strong> bestaat uit vormen en lijnen
-                            en is vooral geschikt voor logo's en tekeningen.
-                        </li>
-
-                        <li>
-                            <strong>Compressie</strong> maakt bestanden kleiner.
-                        </li>
-
-                        <li>
-                            <strong>Verliesvrije compressie</strong> verwijdert
-                            geen informatie.
-                        </li>
-
-                        <li>
-                            <strong>Verliesgevende compressie</strong> verwijdert
-                            een deel van de informatie om het bestand kleiner
-                            te maken.
-                        </li>
-
-                    </ul>
-
-                </font>
-
-            </td>
-        </tr>
-
-    </table>
-
-
-    <br><br>
-
-
-    <!-- ==================================================
-         FOOTER
-         ================================================== -->
-
-    <table width="100%" bgcolor="#17202E" cellpadding="25">
-
-        <tr>
-            <td align="center">
-
-                <font color="#D8E2EE">
-
-                    <strong>Dierenwereld</strong>
-
-                    <br><br>
-
-                    &copy; 2026 - Dierenwereld
-
-                </font>
-
-            </td>
-        </tr>
-
-    </table>
+    <footer>
+        <table width="100%" bgcolor="#111B18" cellpadding="15">
+            <tr>
+                <td align="center">
+                    <font color="#9FB2A9">
+                        Dierenwereld | ICT & Informatica
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </footer>
 
 </body>
-
 </html>
 ```
-
-```
-
-
